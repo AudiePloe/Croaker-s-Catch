@@ -1,7 +1,7 @@
 # GameSim-Spring-2022
 
 ## Game Name
-# (Working on it)
+### (Working on it)
 
 ## Game Mechanics
 * Catch Bugs
