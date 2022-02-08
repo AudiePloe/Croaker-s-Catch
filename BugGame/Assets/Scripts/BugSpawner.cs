@@ -5,9 +5,9 @@ using UnityEngine;
 public class BugSpawner : MonoBehaviour
 {
     public GameObject bug;
-    private int xPosition;
-    private int zPosition;
-    private int bugsSpawned;
+    public int xPosition;
+    public int zPosition;
+    public int bugsSpawned;
 
     // Start is called before the first frame update
     void Start()
