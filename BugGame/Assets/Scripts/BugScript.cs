@@ -16,7 +16,7 @@ public class BugScript : MonoBehaviour
 
     public float runDistance;
 
-    public List<Transform> hidingSpots; // list of positions it can run to
+    public GameObject[] hidingSpots; // list of positions it can run to
 
     bool idle = true; // if its not running
     float time; // used for timing
@@ -27,9 +27,13 @@ public class BugScript : MonoBehaviour
     void Start()
     {
         nav = GetComponent<NavMeshAgent>();
-        time = Random.Range(0.0f, 1.2f); // so that each bug is on their own idle times, otherwise they would all move at once.
+        time = Random.Range(2f, 3.5f); // so that each bug is on their own idle times, otherwise they would all move at once.
         
         nav.speed = walkSpeed;
+
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        hidingSpots = GameObject.FindGameObjectsWithTag("HidingSpot");
+
     }
 
     
@@ -90,8 +94,8 @@ public class BugScript : MonoBehaviour
 
     Transform GetHidingSpot() // selects a random hiding spot for them to run to.
     {
-        int randpos = Random.Range(0, hidingSpots.Count -1);
-        return hidingSpots[randpos];
+        int randpos = Random.Range(0, hidingSpots.Length);
+        return hidingSpots[randpos].GetComponent<Transform>();
     }
 
 }
