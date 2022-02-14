@@ -22,7 +22,7 @@ public class BugScript : MonoBehaviour
     float time; // used for timing
     NavMeshAgent nav; // the NavMeshAgent attached to the bug
 
-    public Transform player;
+    Transform player;
 
     void Start()
     {
@@ -50,7 +50,7 @@ public class BugScript : MonoBehaviour
             }
         }
 
-        //print(Vector3.Distance(player.position, transform.position));
+        print(Vector3.Distance(player.position, transform.position));
 
         if(Vector3.Distance(player.position, transform.position) <= runDistance && idle == true)
         {
