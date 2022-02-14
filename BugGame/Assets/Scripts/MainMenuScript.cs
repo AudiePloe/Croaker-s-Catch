@@ -8,6 +8,6 @@ public class MainMenuScript : MonoBehaviour
     
     public void playGame()
     {
-        SceneManager.LoadScene("MainHub");
+        SceneManager.LoadScene("ForestLevel");
     }
 }
