@@ -10,4 +10,11 @@ public class MainMenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("ForestLevel");
     }
+
+    public void exitGame()
+    {
+
+        Debug.Log("Quit!!!!!!!! >:0");
+        Application.Quit();
+    }
 }
