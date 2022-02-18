@@ -17,4 +17,19 @@ public class MainMenuScript : MonoBehaviour
         Debug.Log("Quit!!!!!!!! >:0");
         Application.Quit();
     }
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void creditsMenu()
+    {
+        SceneManager.LoadScene("CreditsMenu");
+    }
+
+    public void instructMenu()
+    {
+        SceneManager.LoadScene("HowToPlayMenu");
+    }
 }
