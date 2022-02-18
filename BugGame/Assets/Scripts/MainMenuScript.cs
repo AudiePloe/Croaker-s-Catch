@@ -8,7 +8,7 @@ public class MainMenuScript : MonoBehaviour
     
     public void playGame()
     {
-        SceneManager.LoadScene("BugsAITest"); // need to changed to ForestLevel (forest scene does not work with bugs for unknown reason)
+        SceneManager.LoadScene("ForestLevel");
     }
 
     public void exitGame()
