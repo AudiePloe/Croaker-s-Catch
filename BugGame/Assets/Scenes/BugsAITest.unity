@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: d0a3fd2e192913c4bae427c6e89ce791, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -700,6 +700,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ecf152afac5dd2f44b48e6e09c0eef58, type: 3}
       propertyPath: m_Name
       value: Bidodome_XS_Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ecf152afac5dd2f44b48e6e09c0eef58, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf152afac5dd2f44b48e6e09c0eef58, type: 3}
