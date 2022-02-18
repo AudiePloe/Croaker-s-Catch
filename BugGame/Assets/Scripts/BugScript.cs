@@ -24,6 +24,7 @@ public class BugScript : MonoBehaviour
 
     Transform player;
 
+    BugSpawner2 bS2;
     void Start()
     {
         nav = GetComponent<NavMeshAgent>();
@@ -34,6 +35,7 @@ public class BugScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         hidingSpots = GameObject.FindGameObjectsWithTag("HidingSpot");
 
+        bS2 = GameObject.FindGameObjectWithTag("BugSpawner").GetComponent<BugSpawner2>();
     }
 
     
@@ -50,7 +52,7 @@ public class BugScript : MonoBehaviour
             }
         }
 
-        print(Vector3.Distance(player.position, transform.position));
+        //print(Vector3.Distance(player.position, transform.position));
 
         if(Vector3.Distance(player.position, transform.position) <= runDistance && idle == true)
         {
@@ -65,6 +67,8 @@ public class BugScript : MonoBehaviour
 
         if(idle == false && transform.position.x == nav.destination.x && transform.position.z == nav.destination.z)
         {
+            bS2.bugsSpawned--;
+
             Destroy(this.gameObject); // might need to be changed later to have them transform somewhere else instead of destroy to save processing power
         }
 
