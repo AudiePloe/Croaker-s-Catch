@@ -16,10 +16,11 @@ public class BugSpawner2 : MonoBehaviour
     float time = 0;
     public int bugsSpawned;
 
+    Transform player;
 
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -47,12 +48,18 @@ public class BugSpawner2 : MonoBehaviour
 
     Vector3 GetSpawnPoint()
     {
-        return bugSpawns[Random.Range(0, bugSpawns.Count)].position;
+        Vector3 spawnPoint = bugSpawns[Random.Range(0, bugSpawns.Count)].position;
+
+        while (Vector3.Distance(spawnPoint, player.position) <= 20)
+        {
+            spawnPoint = bugSpawns[Random.Range(0, bugSpawns.Count)].position;
+        }
+        return spawnPoint;
     }
 
     GameObject GetBug()
     {
-        print("GotBug");
+       // print("GotBug");
         return bugList[Random.Range(0, bugList.Count)];
     }
 
