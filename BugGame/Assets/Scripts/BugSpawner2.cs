@@ -59,7 +59,7 @@ public class BugSpawner2 : MonoBehaviour
 
     GameObject GetBug()
     {
-        print("GotBug");
+       // print("GotBug");
         return bugList[Random.Range(0, bugList.Count)];
     }
 

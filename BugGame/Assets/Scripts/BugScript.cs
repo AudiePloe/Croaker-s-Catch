@@ -56,7 +56,7 @@ public class BugScript : MonoBehaviour
 
         if(Vector3.Distance(player.position, transform.position) <= runDistance && idle == true)
         {
-            print("AI Running");
+            //print("AI Running");
 
             idle = false;
 
@@ -67,9 +67,7 @@ public class BugScript : MonoBehaviour
 
         if(idle == false && transform.position.x == nav.destination.x && transform.position.z == nav.destination.z)
         {
-            bS2.bugsSpawned--;
-
-            Destroy(this.gameObject); // might need to be changed later to have them transform somewhere else instead of destroy to save processing power
+            DestroyBug();
         }
 
 
@@ -79,7 +77,7 @@ public class BugScript : MonoBehaviour
 
     Vector3 IdleWalk() // chooses a random position to walk to
     {
-        print("AI Walking");
+        //print("AI Walking");
 
         time = 0;
 
@@ -94,6 +92,13 @@ public class BugScript : MonoBehaviour
 
     }
 
+
+    public void DestroyBug()
+    {
+        bS2.bugsSpawned--;
+
+        Destroy(this.gameObject); // might need to be changed later to have them transform somewhere else instead of destroy to save processing power
+    }
 
 
     Transform GetHidingSpot() // selects a random hiding spot for them to run to.
