@@ -7,9 +7,14 @@ public class PlayerController : MonoBehaviour
     public InputManager inputManager;
 
     [Header("Movement")]
-    [SerializeField] float speed = 1.2f;
+    [SerializeField] float mouseSensitivity = 5f;
+    [SerializeField] float walkSpeed = 1f;
+    [SerializeField] float runSpeed = 1.5f;
     [SerializeField] bool holdToRun;
     [SerializeField] bool isCrouch;
+
+    float speed;
+
     Animator anim;
     Vector2 moveInput;
     Vector3 rootmotion;
@@ -26,12 +31,16 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        speed = walkSpeed;
         anim = GetComponent<Animator>(); //Get the Animator Component
         cc = GetComponent<CharacterController>(); //Get the Character Controller Component
     }
 
     void Update()
     {
+        transform.eulerAngles += mouseSensitivity * new Vector3(0, Input.GetAxis("Mouse X"), 0);
+
+
         moveInput.x = Input.GetAxis("Horizontal") * speed; //We are getting the Horizontal movement
         moveInput.y = Input.GetAxis("Vertical") * speed; //We are getting the Vertical movement
 
@@ -120,14 +129,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(button))
         {
             holdToRun = true;
-            speed = 3.5f;
+            speed = runSpeed;
             anim.SetBool("Sprint", true);
         }
 
         if (Input.GetKeyUp(button))
         {
             holdToRun = false;
-            speed = 1.9f;
+            speed = walkSpeed;
             anim.SetBool("Sprint", false);
         }
     }
