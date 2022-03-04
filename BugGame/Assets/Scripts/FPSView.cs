@@ -4,33 +4,72 @@ using UnityEngine;
 
 public class FPSView : MonoBehaviour
 {
-    public GameObject thirdPersonController;
-    public GameObject firstPersonController;
+    [Header("CameraSettings")]
+    public PlayerController PC;
+    public GameObject thirdPCamera;
+    public GameObject firstPCamera;
+    Transform FPC;
+    public float mouseSensitivity = 100f;
+    float xRotation = 0f;
+    public bool isAiming = false;
+
+    [Header("NetGunSettings")]
+    public Rigidbody net;
+    public Transform netGunBarrel;
+    public float netSpeed;
+    public float fireRate;
+    float time = 10f;
 
     void Start()
     {
-        thirdPersonController.SetActive(true);
-        firstPersonController.SetActive(false);
-
+        FPC = firstPCamera.GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+
+
+        if(Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            PC.adjustPlayer();
+        }
+
         if(Input.GetKey(KeyCode.Mouse1))
         {
-            firstPersonController.transform.position = thirdPersonController.transform.position;
+            isAiming = true;
+            PC.canMove = false;
+            thirdPCamera.SetActive(false);
+            firstPCamera.SetActive(true);
 
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-            thirdPersonController.SetActive(false);
-            firstPersonController.SetActive(true);
+            xRotation -= mouseY;
+            FPC.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            transform.Rotate(Vector3.up * mouseX);
         }
         else
         {
-            thirdPersonController.transform.position = firstPersonController.transform.position;
-
-            thirdPersonController.SetActive(true);
-            firstPersonController.SetActive(false);
+            isAiming = false;
+            PC.canMove = true;
+            thirdPCamera.SetActive(true);
+            firstPCamera.SetActive(false);
         }
+
+
+        if(isAiming)
+        {
+            if(Input.GetKey(KeyCode.Mouse0) && time >= fireRate)
+            {
+                Rigidbody netClone = (Rigidbody)Instantiate(net, netGunBarrel.position, netGunBarrel.rotation);
+                netClone.GetComponent<Rigidbody>().AddForce(netGunBarrel.forward * netSpeed);
+
+                time = 0f;
+            }
+        }
+
+        
     }
 }

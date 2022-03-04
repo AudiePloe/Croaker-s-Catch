@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     [Header("PlayerStates")]
     public bool isGrounded;
     public bool isCrouched;
+    public bool canMove = true;
 
     
     float turnSmoothVelocity;
@@ -40,69 +41,84 @@ public class PlayerController : MonoBehaviour
         speed = walkSpeed;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void adjustPlayer()
     {
-        //jump
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            // play jump animation here
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
-        }
-
-
-        //gravity
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
-
-
-        //walk
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
-        if (direction.magnitude >= 0.1f)
+        float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+        float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (canMove)
         {
 
-            // play walk animation here
+            //jump
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            if (isGrounded && velocity.y < 0)
+            {
+                velocity.y = -2f;
+            }
 
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            if (Input.GetButtonDown("Jump") && isGrounded)
+            {
+                // play jump animation here
+                velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            }
+
+
+            //gravity
+            velocity.y += gravity * Time.deltaTime;
+            controller.Move(velocity * Time.deltaTime);
+
+
+            //walk
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
+            Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+            if (direction.magnitude >= 0.1f)
+            {
+
+                // play walk animation here
+
+                float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+                float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+                transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            }
+
+
+            if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
+            {
+
+                // play run animation here
+                speed = sprintSpeed;
+            }
+            else
+            {
+                speed = walkSpeed;
+            }
+
+            if (Input.GetKey(KeyCode.LeftControl) && isGrounded)
+            {
+                // play crouch animation here
+                isCrouched = true;
+            }
+            else
+            {
+                isCrouched = false;
+            }
+
         }
-
-
-        if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
-        {
-
-            // play run animation here
-            speed = sprintSpeed;
-        }
-        else
-        {
-            speed = walkSpeed;
-        }
-
-        if (Input.GetKey(KeyCode.LeftControl) && isGrounded)
-        {
-            // play crouch animation here
-            isCrouched = true;
-        }
-        else
-        {
-            isCrouched = false;
-        }
-
-
     }
 }
