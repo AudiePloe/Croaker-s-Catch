@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerCatch : MonoBehaviour
 {
-    public Text bugsCaughtText;
-
     public int bugsCaught = 0;
 
     bool swing = false;
@@ -24,6 +21,7 @@ public class PlayerCatch : MonoBehaviour
     {
         time += Time.deltaTime;
         swing = false;
+
 
         if(Input.GetKey(KeyCode.Mouse0) && time >= swingRate)
         {
@@ -54,8 +52,6 @@ public class PlayerCatch : MonoBehaviour
             bugsCaught++;
             BugScript bs = col.GetComponent<BugScript>();
             bs.DestroyBug();
-
-            bugsCaughtText.text = ("Bugs Caught: " + bugsCaught);
         }
     }
 
