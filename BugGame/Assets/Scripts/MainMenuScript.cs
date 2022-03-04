@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
+    void Update()
+    {
+        Time.timeScale = 1.0f;   }
     
     public void playGame()
     {
