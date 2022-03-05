@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
-    
+    private void Update()
+    {
+        Time.timeScale = 1.0f;
+    }
     public void playGame()
     {
         SceneManager.LoadScene("ForestLevel");
