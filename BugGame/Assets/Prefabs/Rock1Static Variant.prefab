@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ff1b1f8423438094c8568bee8cf0c924, type: 3}
       propertyPath: m_Name
-      value: Rock1
+      value: Rock1Static Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ff1b1f8423438094c8568bee8cf0c924, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -61,3 +61,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff1b1f8423438094c8568bee8cf0c924, type: 3}
+--- !u!1 &2253155950096004630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ff1b1f8423438094c8568bee8cf0c924, type: 3}
+  m_PrefabInstance: {fileID: 1406733558919891783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3086762251802718099
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2253155950096004630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4068373912626513877, guid: ff1b1f8423438094c8568bee8cf0c924, type: 3}
