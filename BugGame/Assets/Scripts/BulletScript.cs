@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    PlayerCatch pc;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCatch>();
     }
 
     // Update is called once per frame
@@ -18,7 +20,13 @@ public class BulletScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        Destroy(gameObject, 0.1f);
+        if(col.gameObject.tag == "Bug")
+        {
+            pc.bugsCaught++;
+            col.gameObject.GetComponent<BugScript>().DestroyBug();
+        }
+
+        Destroy(gameObject);
     }
 
 }
