@@ -30,12 +30,6 @@ public class FPSView : MonoBehaviour
     {
         time += Time.deltaTime;
 
-
-        if(Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            PC.adjustPlayer();
-        }
-
         if(Input.GetKey(KeyCode.Mouse1))
         {
             isAiming = true;
