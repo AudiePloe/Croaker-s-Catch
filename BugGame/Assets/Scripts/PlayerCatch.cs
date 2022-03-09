@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerCatch : MonoBehaviour
 {
+    public Text bugsCaughtText;
     public int bugsCaught = 0;
-
     bool swing = false;
 
     public float swingRate;
@@ -33,7 +34,7 @@ public class PlayerCatch : MonoBehaviour
             
         }
 
-
+        bugsCaughtText.text = "Bugs Caught: " + bugsCaught;
     }
 
     IEnumerator swingNet()

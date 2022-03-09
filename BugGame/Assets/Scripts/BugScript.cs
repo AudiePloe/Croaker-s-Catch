@@ -107,4 +107,5 @@ public class BugScript : MonoBehaviour
         return hidingSpots[randpos].GetComponent<Transform>();
     }
 
+
 }

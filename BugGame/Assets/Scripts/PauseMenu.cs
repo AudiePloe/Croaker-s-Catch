@@ -22,8 +22,8 @@ public class PauseMenu : MonoBehaviour
     {
      if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.Confined;
+            //Cursor.visible = true;
             if (GameIsPaused)
             {
                 Resume();
@@ -37,6 +37,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume ()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;

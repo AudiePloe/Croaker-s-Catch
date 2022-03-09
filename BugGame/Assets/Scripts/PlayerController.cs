@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public float sprintSpeed;
     public float walkSpeed;
     public float turnSmoothTime = 0.1f;
+    public float movementAcceleration;
     float speed;
 
     [Header("JumpSettings")]
@@ -91,7 +92,11 @@ public class PlayerController : MonoBehaviour
             {
 
                 // play run animation here
-                speed = sprintSpeed;
+                if(speed < sprintSpeed)
+                {
+                    speed += movementAcceleration;
+                }
+
             }
             else
             {
