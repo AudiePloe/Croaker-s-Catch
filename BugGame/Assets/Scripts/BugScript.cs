@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class BugScript : MonoBehaviour
 {
+    public bool isRare = false;
 
     public float walkSpeed; // how fast it normally moves
 

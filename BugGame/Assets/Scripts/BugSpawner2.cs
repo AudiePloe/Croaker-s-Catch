@@ -7,6 +7,8 @@ public class BugSpawner2 : MonoBehaviour
 
     public List<GameObject> bugList;
 
+    public List<GameObject> rareBugsList;
+
     public List<Transform> bugSpawns;
 
     public int maxBugsSpawned;
