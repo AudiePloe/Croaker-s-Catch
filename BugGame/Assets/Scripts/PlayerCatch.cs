@@ -12,9 +12,15 @@ public class PlayerCatch : MonoBehaviour
     public float swingRate;
     float time = 10f;
 
+    [Header ("Caught Bugs Data")]
+    public int moth = 0;
+    public int roach = 0;
+    public int medBeatle = 0;
+    public int bigbeatle = 0;
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
