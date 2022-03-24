@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water
+  m_Name: HG_Water_01
   m_Shader: {fileID: 4800000, guid: 1e56cee9db0b5aa449425610e0d5ae84, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _DisTex:
-        m_Texture: {fileID: 2800000, guid: e884892c1ebcbd8459979942865ce5d3, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _DisSpeed: 0.026
-    - _DisValue: 4.72
+    - _DisSpeed: 0.1
+    - _DisValue: 3
     m_Colors: []
   m_BuildTextureStacks: []
