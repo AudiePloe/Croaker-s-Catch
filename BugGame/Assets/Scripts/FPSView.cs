@@ -14,6 +14,7 @@ public class FPSView : MonoBehaviour
     public bool isAiming = false;
 
     [Header("NetGunSettings")]
+    public GameObject crosshairs;
     public Rigidbody net;
     public Transform netGunBarrel;
     public float netSpeed;
@@ -22,6 +23,7 @@ public class FPSView : MonoBehaviour
 
     void Start()
     {
+        crosshairs.SetActive(false);
         FPC = firstPCamera.GetComponent<Transform>();
     }
 
@@ -37,6 +39,8 @@ public class FPSView : MonoBehaviour
             thirdPCamera.SetActive(false);
             firstPCamera.SetActive(true);
 
+            crosshairs.SetActive(true);
+
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -50,6 +54,7 @@ public class FPSView : MonoBehaviour
             PC.canMove = true;
             thirdPCamera.SetActive(true);
             firstPCamera.SetActive(false);
+            crosshairs.SetActive(false);
         }
 
 

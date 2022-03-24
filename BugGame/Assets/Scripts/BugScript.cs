@@ -17,7 +17,7 @@ public class BugScript : MonoBehaviour
 
     public float runSpeed; // how fast it runs
 
-    public float runDistance;
+    public float runProximity; // how close they player must be for it to run away
 
     public GameObject[] hidingSpots; // list of positions it can run to
 
@@ -57,7 +57,7 @@ public class BugScript : MonoBehaviour
 
         //print(Vector3.Distance(player.position, transform.position));
 
-        if(Vector3.Distance(player.position, transform.position) <= runDistance && idle == true)
+        if(Vector3.Distance(player.position, transform.position) <= runProximity && idle == true)
         {
             //print("AI Running");
 
