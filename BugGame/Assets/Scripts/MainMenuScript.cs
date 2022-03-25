@@ -35,4 +35,19 @@ public class MainMenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("HowToPlayMenu");
     }
+
+    public void forestMenu()
+    {
+        SceneManager.LoadScene("ForestPage");
+    }
+
+    public void journalMenu()
+    {
+        SceneManager.LoadScene("JournalTestScene");
+    }
+
+    public void caveMenu()
+    {
+        SceneManager.LoadScene("CavePage");
+    }
 }
