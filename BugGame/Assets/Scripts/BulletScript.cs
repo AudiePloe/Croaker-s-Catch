@@ -22,7 +22,25 @@ public class BulletScript : MonoBehaviour
     {
         if(col.gameObject.tag == "Bug")
         {
-            pc.bugsCaught++;
+            GameDataStatic.bugsCaught++;
+
+            if (col.gameObject.name == "Moth(Clone)")
+            {
+                GameDataStatic.moths++;
+            }
+            else if (col.gameObject.name == "LargeBeetle(Clone)")
+            {
+                GameDataStatic.largeBeetle++;
+            }
+            else if (col.gameObject.name == "MediumBeetle(Clone)")
+            {
+                GameDataStatic.medBeetle++;
+            }
+            else if (col.gameObject.name == "FireflyBeetle(Clone)")
+            {
+                GameDataStatic.firefly++;
+            }
+
             col.gameObject.GetComponent<BugScript>().DestroyBug();
         }
 

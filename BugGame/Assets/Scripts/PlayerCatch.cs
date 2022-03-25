@@ -12,11 +12,6 @@ public class PlayerCatch : MonoBehaviour
     public float swingRate;
     float time = 10f;
 
-    [Header ("Caught Bugs Data")]
-    public int moth = 0;
-    public int roach = 0;
-    public int medBeatle = 0;
-    public int bigbeatle = 0;
 
     void Start()
     {
@@ -40,7 +35,7 @@ public class PlayerCatch : MonoBehaviour
             
         }
 
-        bugsCaughtText.text = "Bugs Caught: " + bugsCaught;
+        bugsCaughtText.text = "Bugs Caught: " + GameDataStatic.bugsCaught;
     }
 
     IEnumerator swingNet()
@@ -56,9 +51,29 @@ public class PlayerCatch : MonoBehaviour
         if(col.gameObject.tag == "Bug" && swing)
         {
             print("PlayerCaughtBug");
-            bugsCaught++;
+            GameDataStatic.bugsCaught++;
+
+            if(col.gameObject.name == "Moth(Clone)")
+            {
+                GameDataStatic.moths++;
+            } 
+            else if (col.gameObject.name == "LargeBeetle(Clone)")
+            {
+                GameDataStatic.largeBeetle++;
+            }
+            else if (col.gameObject.name == "MediumBeetle(Clone)")
+            {
+                GameDataStatic.medBeetle++;
+            }
+            else if (col.gameObject.name == "FireflyBeetle(Clone)")
+            {
+                GameDataStatic.firefly++;
+            }
+
+
             BugScript bs = col.GetComponent<BugScript>();
             bs.DestroyBug();
+
         }
     }
 
