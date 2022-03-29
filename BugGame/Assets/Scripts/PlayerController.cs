@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
 
     [Header("MovementSettings")]
+    public float crouchSpeed;
     public float sprintSpeed;
     public float walkSpeed;
     public float turnSmoothTime = 0.1f;
@@ -97,6 +98,10 @@ public class PlayerController : MonoBehaviour
                     speed += movementAcceleration;
                 }
 
+            }
+            else if(isCrouched)
+            {
+                speed = crouchSpeed;
             }
             else
             {

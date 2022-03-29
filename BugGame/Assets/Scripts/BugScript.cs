@@ -25,7 +25,9 @@ public class BugScript : MonoBehaviour
     float time; // used for timing
     NavMeshAgent nav; // the NavMeshAgent attached to the bug
 
+    PlayerController playerController;
     Transform player;
+    float runProxy;
 
     BugSpawner2 bS2;
     void Start()
@@ -35,6 +37,7 @@ public class BugScript : MonoBehaviour
         
         nav.speed = walkSpeed;
 
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         hidingSpots = GameObject.FindGameObjectsWithTag("HidingSpot");
 
@@ -57,7 +60,15 @@ public class BugScript : MonoBehaviour
 
         //print(Vector3.Distance(player.position, transform.position));
 
-        if(Vector3.Distance(player.position, transform.position) <= runProximity && idle == true)
+
+        if (playerController.isCrouched)
+        {
+            runProxy = runProximity / 2;
+        }
+        else
+            runProxy = runProximity;
+
+        if(Vector3.Distance(player.position, transform.position) <= runProxy && idle == true)
         {
             //print("AI Running");
 
