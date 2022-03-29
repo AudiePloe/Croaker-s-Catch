@@ -3911,6 +3911,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+  crouchSpeed: 3
   sprintSpeed: 10
   walkSpeed: 6
   turnSmoothTime: 0.1
@@ -4008,7 +4009,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7565472116871430433}
-  m_LocalRotation: {x: 0.09485104, y: -0.0000000042822013, z: 4.0801085e-10, w: 0.9954915}
+  m_LocalRotation: {x: 0.09485104, y: 0.0000000043177453, z: -4.1139747e-10, w: 0.9954915}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4069,7 +4070,7 @@ GameObject:
   - component: {fileID: 7565472117282807039}
   m_Layer: 0
   m_Name: FrogPlayer
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4115,7 +4116,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7565472117363029441}
-  m_LocalRotation: {x: 0.1518842, y: -0.000000017006759, z: 0.0000000026133777, w: 0.9883983}
+  m_LocalRotation: {x: 0.15188418, y: 0.000000017006759, z: -0.0000000026133773, w: 0.9883983}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4358,7 +4359,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7565472117873371560}
-  m_LocalRotation: {x: 0.15188421, y: -0.000000017006753, z: 0.0000000026133455, w: 0.9883983}
+  m_LocalRotation: {x: 0.1518842, y: 0.000000017006748, z: -0.0000000026133034, w: 0.9883983}
   m_LocalPosition: {x: 0, y: 4.5, z: -7.720001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

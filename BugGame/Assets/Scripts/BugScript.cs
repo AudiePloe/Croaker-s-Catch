@@ -37,8 +37,9 @@ public class BugScript : MonoBehaviour
         
         nav.speed = walkSpeed;
 
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        playerController = player.GetComponent<PlayerController>();
+
         hidingSpots = GameObject.FindGameObjectsWithTag("HidingSpot");
 
         bS2 = GameObject.FindGameObjectWithTag("BugSpawner").GetComponent<BugSpawner2>();
@@ -117,8 +118,41 @@ public class BugScript : MonoBehaviour
 
     Transform GetHidingSpot() // selects a random hiding spot for them to run to.
     {
+        Transform firstClosest = hidingSpots[0].transform;
+        Transform secondClosest = hidingSpots[1].transform;
+        Transform thirdClosest = hidingSpots[2].transform;
+
+        for (int i = 0; i < hidingSpots.Length; i++)
+        {
+            if(Vector3.Distance(transform.position, hidingSpots[i].transform.position) < Vector3.Distance(transform.position, firstClosest.position))
+            {
+                firstClosest = hidingSpots[i].transform;
+                continue;
+            }
+
+            if (Vector3.Distance(transform.position, hidingSpots[i].transform.position) < Vector3.Distance(transform.position, secondClosest.position))
+            {
+                secondClosest = hidingSpots[i].transform;
+                continue;
+            }
+
+            if (Vector3.Distance(transform.position, hidingSpots[i].transform.position) < Vector3.Distance(transform.position, thirdClosest.position))
+            {
+                thirdClosest = hidingSpots[i].transform;
+                continue;
+            }
+
+        }
+
+        List<Transform> closestSpots = new List<Transform>();
+
+        closestSpots.Add(firstClosest);
+        closestSpots.Add(secondClosest);
+        closestSpots.Add(thirdClosest);
+
+
         int randpos = Random.Range(0, hidingSpots.Length);
-        return hidingSpots[randpos].GetComponent<Transform>();
+        return closestSpots[randpos];
     }
 
 
