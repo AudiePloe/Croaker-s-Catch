@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9084473879533152013}
+  - component: {fileID: 5961582851708157768}
   m_Layer: 0
   m_Name: SkinnyWoodTree 4
   m_TagString: Untagged
@@ -31,6 +32,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &5961582851708157768
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4999297551687348002}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.86103535, y: 7.6292505, z: 0.50468063}
+  m_Size: 17.982342
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1981809450797723462}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1981809450797723462}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1981809450797723462}
+  m_Enabled: 1
 --- !u!1001 &883084393913906114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,5 +131,10 @@ PrefabInstance:
 --- !u!4 &850021369882121257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 71cf0d0d65cc67d4481d26b7dec0d901, type: 3}
+  m_PrefabInstance: {fileID: 883084393913906114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1981809450797723462 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 71cf0d0d65cc67d4481d26b7dec0d901, type: 3}
   m_PrefabInstance: {fileID: 883084393913906114}
   m_PrefabAsset: {fileID: 0}
