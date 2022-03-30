@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public UnityEvent OnPause;
 
 
      void Start()
@@ -49,7 +51,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
+        OnPause.Invoke();
         GameIsPaused = true;
     }
 
@@ -63,4 +65,6 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("QuitGAME ;]");
         Application.Quit();
     }
+
+
 }
