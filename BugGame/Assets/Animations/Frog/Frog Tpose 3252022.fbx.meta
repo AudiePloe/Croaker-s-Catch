@@ -1,12 +1,39 @@
 fileFormatVersion: 2
-guid: c7d30f8cadd66b64d8259b549f40825b
+guid: 18e0d8163ff15e94b8257c725bca8238
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
+  internalIDToNameTable: []
+  externalObjects:
   - first:
-      74: 1827226128182048838
-    second: Take 001
-  externalObjects: {}
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FROGTEXT
+    second: {instanceID: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FRog_new_rig_and_stuff_4_Backpact_texture
+    second: {fileID: 2100000, guid: c339f920f58e6864497fb2467a5b9937, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FRog_new_rig_and_stuff_4_Gun1_Texture
+    second: {fileID: 2100000, guid: 6e4a903ceaeb42d46b76ee8c8a1d554b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FRog_new_rig_and_stuff_4_Gun2_Texture
+    second: {fileID: 2100000, guid: 6e4a903ceaeb42d46b76ee8c8a1d554b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FRog_new_rig_and_stuff_4_Teeth_Texture
+    second: {fileID: 2100000, guid: 31e00f86104fbb34589446966c2e3df3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FRog_new_rig_and_stuff_4_body_texture
+    second: {fileID: 2100000, guid: c047641870e170941bde9d235ad17a4f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -26,7 +53,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -37,7 +64,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 105
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -75,7 +102,9 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - 79db3e28f5a958240aab662bfd1164d9
+  - c7d30f8cadd66b64d8259b549f40825b
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -88,16 +117,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 105
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
