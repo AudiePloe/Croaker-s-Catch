@@ -151,7 +151,7 @@ public class BugScript : MonoBehaviour
         closestSpots.Add(thirdClosest);
 
 
-        int randpos = Random.Range(0, hidingSpots.Length);
+        int randpos = Random.Range(1, hidingSpots.Length);
         return closestSpots[randpos];
     }
 

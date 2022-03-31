@@ -9,6 +9,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Animation")]
+    public Animator FrogController;
+
+
     [Header("GameObjects")]
     public CharacterController controller;
     public Transform cam;
@@ -92,7 +96,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
             {
 
-                // play run animation here
+                FrogController.SetBool("isRunning", true);
                 if(speed < sprintSpeed)
                 {
                     speed += movementAcceleration;
@@ -115,6 +119,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                FrogController.SetBool("isRunning", false);
                 isCrouched = false;
             }
 
