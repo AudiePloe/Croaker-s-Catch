@@ -5,6 +5,7 @@ using UnityEngine;
 public class FPSView : MonoBehaviour
 {
     [Header("CameraSettings")]
+    public GameObject playerModel;
     public PlayerController PC;
     public GameObject thirdPCamera;
     public GameObject firstPCamera;
@@ -23,6 +24,7 @@ public class FPSView : MonoBehaviour
 
     void Start()
     {
+        playerModel.SetActive(true);
         crosshairs.SetActive(false);
         FPC = firstPCamera.GetComponent<Transform>();
     }
@@ -39,6 +41,7 @@ public class FPSView : MonoBehaviour
             thirdPCamera.SetActive(false);
             firstPCamera.SetActive(true);
 
+            playerModel.SetActive(false);
             crosshairs.SetActive(true);
 
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
@@ -55,6 +58,7 @@ public class FPSView : MonoBehaviour
             thirdPCamera.SetActive(true);
             firstPCamera.SetActive(false);
             crosshairs.SetActive(false);
+            playerModel.SetActive(true);
         }
 
 
