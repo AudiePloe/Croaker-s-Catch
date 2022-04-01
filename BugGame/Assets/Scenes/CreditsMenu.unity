@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -574,6 +574,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &832134478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 832134479}
+  - component: {fileID: 832134481}
+  - component: {fileID: 832134480}
+  m_Layer: 5
+  m_Name: Thnxtxt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &832134479
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832134478}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1585623721}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 10, y: -1656}
+  m_SizeDelta: {x: 300, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &832134480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832134478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ec9e70fe494a1e344be5cc1570c3febd, type: 3}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Thanks for playing :)
+--- !u!222 &832134481
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832134478}
+  m_CullTransparentMesh: 1
 --- !u!1 &911277739
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,8 +725,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Roger Munoz\n\nAjahana Smith\r\n\nAracely Garcia\r\n\nAudie Ploe\r\n\n\n\nAracely
     Garcia \nHumberto Garcia\nRoger Munoz\nAjahana Smith\nWesley Winchester\r\n\n\nAracely
-    Garcia\nHumberto Garcia\nRoger Munoz\nAjahana Smith\nWesley Winchester\r\n\n\n
-    Aracely Garcia \nHumberto Garcia\nRoger Munoz\nAjahana Smith\r\n\r\n\nJarad Heidelberg
+    Garcia\nHumberto Garcia\nRoger Munoz\nAjahana Smith\nWesley Winchester\r\n\n\nAracely
+    Garcia \nHumberto Garcia\nRoger Munoz\nAjahana Smith\r\n\r\n\nJarad Heidelberg
     \r\n\r\n\nHumberto Garcia\nWesley Winchester\r\n\r\n\nAjahana Smith\nWesley Winchester\r\n\n\nMagic
     Gamble Sample by MrtheNoronha https://freesound.org/people/Mrthenoronha/sounds/514878/\n\nFlock
     Bebop Sample by MrtheNoronha\nhttps://freesound.org/people/Mrthenoronha/sounds/528717/"
@@ -1043,12 +1122,13 @@ RectTransform:
   - {fileID: 2086765708}
   - {fileID: 1416582323}
   - {fileID: 911277740}
+  - {fileID: 832134479}
   m_Father: {fileID: 1290266390}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: -221}
+  m_AnchoredPosition: {x: -5, y: 81}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1585623722
