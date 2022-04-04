@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class PlayerCatch : MonoBehaviour
 {
+    public PlayerController PC;
+    public Animator FrogController;
     public Text bugsCaughtText;
     public int bugsCaught = 0;
     bool swing = false;
 
     public float swingRate;
-    float time = 10f;
+    public float time = 10f;
 
 
     void Start()
@@ -28,21 +30,26 @@ public class PlayerCatch : MonoBehaviour
         if(Input.GetKey(KeyCode.Mouse0) && time >= swingRate)
         {
             // play animation for swinging net
+            PC.canMove = false;
+            FrogController.SetBool("isCatching", true);
 
             print("PlayerSwing");
             swing = true;
-            swingNet();
+            Invoke("swingNet", 0.5f);
             
         }
+        
 
         bugsCaughtText.text = "Bugs Caught: " + GameDataStatic.bugsCaught;
     }
 
-    IEnumerator swingNet()
+    void swingNet()
     {
         time = 0;
-        yield return new WaitForSeconds(0.5f);
+        PC.canMove = true;
+        FrogController.SetBool("isCatching", false);
     }
+
 
 
 

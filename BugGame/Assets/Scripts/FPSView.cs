@@ -51,7 +51,7 @@ public class FPSView : MonoBehaviour
             FPC.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
             transform.Rotate(Vector3.up * mouseX);
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.Mouse1))
         {
             isAiming = false;
             PC.canMove = true;

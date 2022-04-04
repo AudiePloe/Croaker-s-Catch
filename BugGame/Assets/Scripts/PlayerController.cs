@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
             {
 
                 // play walk animation here
+                FrogController.SetBool("isWalking", true);
 
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
@@ -90,6 +91,10 @@ public class PlayerController : MonoBehaviour
 
                 Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
                 controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            }
+            else
+            {
+                FrogController.SetBool("isWalking", false);
             }
 
 
@@ -109,6 +114,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                FrogController.SetBool("isRunning", false);
                 speed = walkSpeed;
             }
 
@@ -119,7 +125,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                FrogController.SetBool("isRunning", false);
+               
                 isCrouched = false;
             }
 
