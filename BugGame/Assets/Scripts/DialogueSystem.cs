@@ -14,7 +14,7 @@ public class DialogueSystem: MonoBehaviour {
     public float letterDelay = 0.1f;
     public float letterMultiplier = 0.5f;
 
-    public KeyCode DialogueInput = KeyCode.F;
+    public KeyCode DialogueInput = KeyCode.E;
 
     public string Names;
 
@@ -54,7 +54,7 @@ public class DialogueSystem: MonoBehaviour {
         outOfRange = false;
         dialogueBoxGUI.gameObject.SetActive(true);
         nameText.text = Names;
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (!dialogueActive)
             {

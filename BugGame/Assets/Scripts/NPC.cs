@@ -30,7 +30,7 @@ public class NPC : MonoBehaviour {
     {
         this.gameObject.GetComponent<NPC>().enabled = true;
         FindObjectOfType<DialogueSystem>().EnterRangeOfNPC();
-        if ((other.gameObject.tag == "Player") && Input.GetKeyDown(KeyCode.F))
+        if ((other.gameObject.tag == "Player") && Input.GetKeyDown(KeyCode.E))
         {
             this.gameObject.GetComponent<NPC>().enabled = true;
             dialogueSystem.Names = Name;
