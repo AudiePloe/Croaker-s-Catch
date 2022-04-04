@@ -13,6 +13,7 @@ public class FPSView : MonoBehaviour
     public float mouseSensitivity = 100f;
     float xRotation = 0f;
     public bool isAiming = false;
+    public bool canAim = true;
 
     [Header("NetGunSettings")]
     public GameObject crosshairs;
@@ -32,47 +33,49 @@ public class FPSView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-
-        if(Input.GetKey(KeyCode.Mouse1))
+        if (canAim)
         {
-            isAiming = true;
-            PC.canMove = false;
-            thirdPCamera.SetActive(false);
-            firstPCamera.SetActive(true);
+            time += Time.deltaTime;
 
-            playerModel.SetActive(false);
-            crosshairs.SetActive(true);
-
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-            xRotation -= mouseY;
-            FPC.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-            transform.Rotate(Vector3.up * mouseX);
-        }
-        else if (Input.GetKeyUp(KeyCode.Mouse1))
-        {
-            isAiming = false;
-            PC.canMove = true;
-            thirdPCamera.SetActive(true);
-            firstPCamera.SetActive(false);
-            crosshairs.SetActive(false);
-            playerModel.SetActive(true);
-        }
-
-
-        if(isAiming)
-        {
-            if(Input.GetKey(KeyCode.Mouse0) && time >= fireRate)
+            if (Input.GetKey(KeyCode.Mouse1))
             {
-                Rigidbody netClone = (Rigidbody)Instantiate(net, netGunBarrel.position, netGunBarrel.rotation);
-                netClone.GetComponent<Rigidbody>().AddForce(netGunBarrel.forward * netSpeed);
+                isAiming = true;
+                PC.canMove = false;
+                thirdPCamera.SetActive(false);
+                firstPCamera.SetActive(true);
 
-                time = 0f;
+                playerModel.SetActive(false);
+                crosshairs.SetActive(true);
+
+                float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+                float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+                xRotation -= mouseY;
+                FPC.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+                transform.Rotate(Vector3.up * mouseX);
             }
-        }
+            else if (Input.GetKeyUp(KeyCode.Mouse1))
+            {
+                isAiming = false;
+                PC.canMove = true;
+                thirdPCamera.SetActive(true);
+                firstPCamera.SetActive(false);
+                crosshairs.SetActive(false);
+                playerModel.SetActive(true);
+            }
 
-        
+
+            if (isAiming)
+            {
+                if (Input.GetKey(KeyCode.Mouse0) && time >= fireRate)
+                {
+                    Rigidbody netClone = (Rigidbody)Instantiate(net, netGunBarrel.position, netGunBarrel.rotation);
+                    netClone.GetComponent<Rigidbody>().AddForce(netGunBarrel.forward * netSpeed);
+
+                    time = 0f;
+                }
+            }
+
+        }
     }
 }

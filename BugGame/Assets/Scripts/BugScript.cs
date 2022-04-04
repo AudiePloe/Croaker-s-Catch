@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class BugScript : MonoBehaviour
 {
+    public AudioSource skitterSound;
+
     public string bugName;
 
     public bool isRare = false;
@@ -72,6 +74,8 @@ public class BugScript : MonoBehaviour
         if(Vector3.Distance(player.position, transform.position) <= runProxy && idle == true)
         {
             //print("AI Running");
+
+            skitterSound.Play();
 
             idle = false;
 
