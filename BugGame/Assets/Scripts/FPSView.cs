@@ -14,6 +14,9 @@ public class FPSView : MonoBehaviour
     float xRotation = 0f;
     public bool isAiming = false;
     public bool canAim = true;
+    public float minCameraAngle;
+    public float maxCameraAngle;
+
 
     [Header("NetGunSettings")]
     public GameObject crosshairs;
@@ -51,11 +54,15 @@ public class FPSView : MonoBehaviour
                 float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
                 xRotation -= mouseY;
-                FPC.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+                FPC.localRotation = Quaternion.Euler(Mathf.Clamp(xRotation, minCameraAngle, maxCameraAngle), 0f, 0f);
+
                 transform.Rotate(Vector3.up * mouseX);
+
+
             }
             else if (Input.GetKeyUp(KeyCode.Mouse1))
             {
+
                 isAiming = false;
                 PC.canMove = true;
                 thirdPCamera.SetActive(true);

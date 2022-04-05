@@ -606,9 +606,11 @@ MonoBehaviour:
   PC: {fileID: 7565472118353043247}
   thirdPCamera: {fileID: 7565472117510948178}
   firstPCamera: {fileID: 939577321}
-  mouseSensitivity: 400
+  mouseSensitivity: 150
   isAiming: 0
   canAim: 1
+  minCameraAngle: -40
+  maxCameraAngle: 50
   crosshairs: {fileID: 0}
   net: {fileID: 7595045722182217080, guid: 0d587aad7c369f148813bd77523e3350, type: 3}
   netGunBarrel: {fileID: 347784321}
@@ -892,7 +894,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7565472117363029441}
-  m_LocalRotation: {x: 0.2083247, y: 0.07483315, z: -0.015988318, w: 0.97506166}
+  m_LocalRotation: {x: 0.20832469, y: 0.074833155, z: -0.015988316, w: 0.97506166}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1135,7 +1137,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7565472117873371560}
-  m_LocalRotation: {x: 0.20832469, y: 0.07483314, z: -0.015988318, w: 0.97506166}
+  m_LocalRotation: {x: 0.20832467, y: 0.07483315, z: -0.015988313, w: 0.97506166}
   m_LocalPosition: {x: -0.26116562, y: 4.5, z: -5.3636475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
