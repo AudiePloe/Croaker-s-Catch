@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 public class PauseMenu : MonoBehaviour
 {
+    public bool showSurvey;
+
+
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public UnityEvent OnPause;
@@ -69,6 +72,10 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        if(showSurvey)
+            Application.OpenURL("https://forms.gle/XmoEHsqZ658m1due7");
+
+
         Debug.Log("QuitGAME ;]");
         Application.Quit();
     }

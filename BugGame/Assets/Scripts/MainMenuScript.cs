@@ -16,7 +16,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void exitGame()
     {
-
+        Application.OpenURL("https://forms.gle/XmoEHsqZ658m1due7");
         Debug.Log("Quit!!!!!!!! >:0");
         Application.Quit();
     }
