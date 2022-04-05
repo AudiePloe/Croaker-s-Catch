@@ -27,7 +27,7 @@ public class PlayerCatch : MonoBehaviour
         swing = false;
 
 
-        if(Input.GetKey(KeyCode.Mouse0) && time >= swingRate)
+        if(Input.GetKey(KeyCode.Mouse0) && time >= swingRate && PC.isGrounded)
         {
             // play animation for swinging net
             PC.canMove = false;
@@ -35,7 +35,7 @@ public class PlayerCatch : MonoBehaviour
 
             print("PlayerSwing");
             swing = true;
-            Invoke("swingNet", 0.5f);
+            Invoke("swingNet", swingRate);
             
         }
         

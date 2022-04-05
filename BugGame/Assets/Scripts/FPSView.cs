@@ -33,7 +33,7 @@ public class FPSView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canAim)
+        if (canAim && PC.isGrounded)
         {
             time += Time.deltaTime;
 

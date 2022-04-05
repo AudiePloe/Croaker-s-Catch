@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     [Header("Animation")]
     public Animator FrogController;
 
+    [Header("Sound")]
+    public AudioSource walkSound;
+    public AudioSource runSound;
+    public AudioSource jumpSound;
 
     [Header("GameObjects")]
     public CharacterController controller;
@@ -65,6 +69,8 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 // play jump animation here
+
+                jumpSound.Play();
                 velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
             }
 

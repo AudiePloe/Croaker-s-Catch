@@ -533,6 +533,7 @@ GameObject:
   - component: {fileID: 1036239961}
   - component: {fileID: 937436000711756228}
   - component: {fileID: 7565472118353043247}
+  - component: {fileID: 965373025}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Player
@@ -629,7 +630,7 @@ MonoBehaviour:
   FrogController: {fileID: 6412548974619460774}
   bugsCaughtText: {fileID: 0}
   bugsCaught: 0
-  swingRate: 0.5
+  swingRate: 0.35
   time: 10
 --- !u!114 &7565472118353043247
 MonoBehaviour:
@@ -644,6 +645,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FrogController: {fileID: 6412548974619460774}
+  walkSound: {fileID: 0}
+  runSound: {fileID: 0}
+  jumpSound: {fileID: 965373025}
   controller: {fileID: 7565472118353043246}
   cam: {fileID: 7565472117873371556}
   groundCheck: {fileID: 7565472118245446130}
@@ -661,6 +665,102 @@ MonoBehaviour:
   isGrounded: 0
   isCrouched: 0
   canMove: 1
+--- !u!82 &965373025
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7222820659237026125}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3863eae91dd69c543b0fea5303d89ff8, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7565472116871430433
 GameObject:
   m_ObjectHideFlags: 3
@@ -792,7 +892,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7565472117363029441}
-  m_LocalRotation: {x: 0.20832469, y: 0.074833184, z: -0.01598832, w: 0.97506166}
+  m_LocalRotation: {x: 0.2083247, y: 0.07483315, z: -0.015988318, w: 0.97506166}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1035,7 +1135,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7565472117873371560}
-  m_LocalRotation: {x: 0.20832467, y: 0.07483318, z: -0.015988316, w: 0.97506166}
+  m_LocalRotation: {x: 0.20832469, y: 0.07483314, z: -0.015988318, w: 0.97506166}
   m_LocalPosition: {x: -0.26116562, y: 4.5, z: -5.3636475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1193,7 +1293,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7565472118247124658}
-  m_LocalRotation: {x: 0.18012556, y: 0.07526305, z: -0.013824119, w: 0.98066264}
+  m_LocalRotation: {x: 0.18012556, y: 0.07526303, z: -0.013824115, w: 0.98066264}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
