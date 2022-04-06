@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class PauseMenu : MonoBehaviour
 {
     public bool showSurvey;
-
+    public GameObject journalObjects;
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
@@ -46,6 +46,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume ()
     {
+        journalObjects.SetActive(false);
         playerFPS.canAim = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -57,6 +58,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause ()
     {
+        journalObjects.SetActive(true);
         playerFPS.canAim = false;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
