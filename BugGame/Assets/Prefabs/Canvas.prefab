@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ec9e70fe494a1e344be5cc1570c3febd, type: 3}
-    m_FontSize: 35
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -81,16 +81,16 @@ MonoBehaviour:
   m_Text: 'Jewel Beetle
 
 
-    Size-3 to 80 mm
+    Size: 3 to 80 mm
 
-    Location-Australian
+    Location: can be found on tree
+    stumps
 
-    Stat-Harmless
+    Food: mainly feed on plant foliage or nectar.
 
 
-    Buprestidae
-    is a family of beetles known as jewel beetles or metallic wood-boring beetles
-    because of their glossy iridescent colors.
+    Don''t be fooled
+    these bugs are not actually jewels!
 
 
 '
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 758621791618626816}
   - component: {fileID: 758621791618626819}
   m_Layer: 0
-  m_Name: Text
+  m_Name: PsuedoScorpP text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ec9e70fe494a1e344be5cc1570c3febd, type: 3}
-    m_FontSize: 35
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -257,16 +257,18 @@ MonoBehaviour:
   m_Text: 'PseudoScorpion
 
 
-    Size-2 to 8 mm
-
-    location-UK
-
-    Stat-Harmless
+    Size: 2 to 8 mm
 
 
-    Pseudoscorpions
-    have an extended life cycle of 1 to 3 years, depending on the location and temperature.
-    The mating ritual for pseudosporpions is similar to the dance of true scorpions.
+    Location: often found in cracks,
+    crevices and similar spaces
+
+
+    Food: many types of small insects and other
+    arthropods
+
+
+    Watch out these guys are venomous!!
 
 
 '
@@ -516,7 +518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.593}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 508, y: 207}
+  m_AnchoredPosition: {x: 547, y: -190}
   m_SizeDelta: {x: 121.6463, y: 214.1102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &758621791799490961
@@ -867,10 +869,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ec9e70fe494a1e344be5cc1570c3febd, type: 3}
-    m_FontSize: 35
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 46
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -878,10 +880,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "FireFly\n\nSize-5 to 25 mm\nLocation-US\nStat-Harmless\n\nFirefly larvae
-    eat snails, worms, and slugs, which they inject with a numbing chemical to disable.
-    Adults eat other fireflies, nectar, or pollen, although some don\u2019t eat at
-    all.\n"
+  m_Text: "Firefly\n\nSize:  Can reach up to 2.5 cm in length \n\nLocation: wetlands,
+    swamps, riparian areas, abandoned fields, forests, chaparral, and scrublands\n\nFood:
+    Firefly larvae eat snails, worms, and slugs\n\nFireflies are neither made of
+    fire or are house flies. "
 --- !u!1 &758621792046759220
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,14 +911,14 @@ RectTransform:
   m_GameObject: {fileID: 758621792046759220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3774999, y: 1.3774999, z: 1.3774999}
+  m_LocalScale: {x: 0.86212206, y: 0.86212206, z: 0.86212206}
   m_Children: []
   m_Father: {fileID: 758621791895683699}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -286, y: 202}
+  m_AnchoredPosition: {x: -126, y: 251}
   m_SizeDelta: {x: 216.4188, y: 216.4188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &758621792046759218
@@ -1748,10 +1750,10 @@ RectTransform:
   m_Father: {fileID: 758621793183341936}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.052400548, y: 0.5}
-  m_AnchorMax: {x: 0.365, y: 1}
-  m_AnchoredPosition: {x: 11.200012, y: 88.5}
-  m_SizeDelta: {x: 1008.3303, y: 1124.5383}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 165.5, y: -106}
+  m_SizeDelta: {x: 1400.1, y: 293.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &758621793030735192
 CanvasRenderer:
@@ -1781,7 +1783,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a7d7ced3c189464a9794cf8a8fe6277, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b55ca7e9fc086ce40acf87a2b93f4a48, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2721,7 +2723,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Bugs Caught: '
+  m_Text: 'Bugs Caught : '
 --- !u!1 &758621793348758599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,7 +3245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &758621793581308278
 RectTransform:
   m_ObjectHideFlags: 0
