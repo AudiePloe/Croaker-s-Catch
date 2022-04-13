@@ -14,11 +14,8 @@ public static class GameDataStatic
     public static int firefly         { get; set; }
 
 
-
-
-
-
-
+    // Game data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    public static float gameVolume = 1;
 
 
 }
