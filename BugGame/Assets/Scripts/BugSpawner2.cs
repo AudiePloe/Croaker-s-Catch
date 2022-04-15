@@ -5,20 +5,27 @@ using UnityEngine;
 public class BugSpawner2 : MonoBehaviour
 {
 
-    public List<GameObject> bugList;
+    public List<GameObject> bugList; // list of normal bugs to spawn
 
-    public List<GameObject> rareBugsList;
+    public List<GameObject> stationaryBugList; // list of bugs that dont move
 
-    public List<Transform> bugSpawns;
+    public int maxStationaryBugs; // max stationary bugs
+    int stationaryBugsSpawned; // number of stationary bugs spawned
 
-    public int maxBugsSpawned;
+    public List<GameObject> rareBugList; // list of rate bugs
 
-    public float spawnRate;
+    public float rareBugChance; // chance that rare bug will spawn (out of 100)
+
+    public List<Transform> bugSpawns; // list of all spawnpoints in map
+
+    public int maxBugsSpawned; // number of moving bugs spawned
+
+    public float spawnRate; // rate at which they spawn
 
     float time = 0;
-    public int bugsSpawned;
+    public int bugsSpawned; // number of bugs spawned
 
-    Transform player;
+    Transform player; // used for reference to players position
 
     void Start()
     {
@@ -37,18 +44,32 @@ public class BugSpawner2 : MonoBehaviour
             time = 0;
         }
 
+        if (stationaryBugsSpawned < maxStationaryBugs)
+        {
+            getStationaryBug();
+        }
         
     }
 
 
-    void SpawnBug()
+    void SpawnBug() // spawns bugs from lists available
     {
-        GameObject newBug = (GameObject)Instantiate(GetBug(), GetSpawnPoint(), Quaternion.identity);
-        bugsSpawned++;
+
+        if(rareBugChance > Random.Range(0f, 100f))
+        {
+            GameObject newRareBug = (GameObject)Instantiate(GetRareBug(), GetSpawnPoint(), Quaternion.identity);
+            bugsSpawned++;
+        } 
+        else
+        {
+            GameObject newBug = (GameObject)Instantiate(GetBug(), GetSpawnPoint(), Quaternion.identity);
+            bugsSpawned++;
+        }
+
     }
 
 
-    Vector3 GetSpawnPoint()
+    Vector3 GetSpawnPoint() // returns a random spawnpoint from list
     {
         Vector3 spawnPoint = bugSpawns[Random.Range(0, bugSpawns.Count)].position;
 
@@ -59,10 +80,26 @@ public class BugSpawner2 : MonoBehaviour
         return spawnPoint;
     }
 
-    GameObject GetBug()
+    GameObject GetBug() // returns random bug from list
     {
        // print("GotBug");
         return bugList[Random.Range(0, bugList.Count)];
     }
+
+    GameObject GetRareBug() // returns rare bug
+    {
+        // print("GotBug");
+        return rareBugList[Random.Range(0, bugList.Count)];
+    }
+
+
+    void getStationaryBug() // sets random stationary bug active in game
+    {
+        GameObject newBug = stationaryBugList[Random.Range(0, stationaryBugList.Count)];
+        stationaryBugList.Remove(newBug);
+        newBug.SetActive(true);
+
+    }
+
 
 }
