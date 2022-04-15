@@ -52,9 +52,24 @@ public class PlayerCatch : MonoBehaviour
 
 
 
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Bug")
+        {
+            col.GetComponent<BugScript>().lightSource.SetActive(false);
+        }
+    }
+
 
     private void OnTriggerStay(Collider col)
     {
+        if(col.gameObject.tag == "Bug")
+        {
+            col.GetComponent<BugScript>().lightSource.SetActive(true);
+        }
+
+
+
         if(col.gameObject.tag == "Bug" && swing)
         {
             print("PlayerCaughtBug");

@@ -7,6 +7,8 @@ public class BugScript : MonoBehaviour
 {
     public AudioSource skitterSound;
 
+    public GameObject lightSource;
+
     public string bugName;
 
     public bool isRare = false;
