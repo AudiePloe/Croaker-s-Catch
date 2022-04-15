@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class FPSView : MonoBehaviour
@@ -20,6 +21,7 @@ public class FPSView : MonoBehaviour
 
     [Header("NetGunSettings")]
     public GameObject crosshairs;
+    public GameObject cooldownIndicator;
     public Rigidbody net;
     public Transform netGunBarrel;
     public float netSpeed;
@@ -28,6 +30,7 @@ public class FPSView : MonoBehaviour
 
     void Start()
     {
+        cooldownIndicator.SetActive(false);
         playerModel.SetActive(true);
         crosshairs.SetActive(false);
         FPC = firstPCamera.GetComponent<Transform>();
@@ -82,6 +85,21 @@ public class FPSView : MonoBehaviour
                     time = 0f;
                 }
             }
+
+
+            if(time <= fireRate)
+            {
+                cooldownIndicator.SetActive(true);
+
+                cooldownIndicator.GetComponent<Image>().fillAmount = time / fireRate;
+
+            }
+            else
+            {
+                cooldownIndicator.SetActive(false);
+            }
+
+
 
         }
     }

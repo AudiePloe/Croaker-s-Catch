@@ -15432,6 +15432,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3548a9c91a637dc4b9547118b37e9336, type: 3}
+--- !u!1 &730749260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1330494873, guid: 3548a9c91a637dc4b9547118b37e9336, type: 3}
+  m_PrefabInstance: {fileID: 730749259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &734118116
 GameObject:
   m_ObjectHideFlags: 0
@@ -30158,6 +30163,10 @@ PrefabInstance:
       propertyPath: crosshairs
       value: 
       objectReference: {fileID: 1621353253}
+    - target: {fileID: 1036239961, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
+      propertyPath: cooldownIndicator
+      value: 
+      objectReference: {fileID: 730749260}
     - target: {fileID: 937436000711756228, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: bugsCaughtText
       value: 
@@ -30208,11 +30217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.10144757
+      value: 0.101447605
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0155387195
+      value: -0.015538722
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117282806912, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_Name
@@ -60580,7 +60589,10 @@ MonoBehaviour:
   - {fileID: 595789088616295299, guid: a9209228692f99942a458ac0fefb981a, type: 3}
   - {fileID: 7476586904485812909, guid: 55249fb63cdcc8b40814e899b9719564, type: 3}
   - {fileID: 1890004315932818053, guid: 53e9ecf23e694e443b9f51a37fc7a365, type: 3}
-  rareBugsList: []
+  stationaryBugList: []
+  maxStationaryBugs: 0
+  rareBugList: []
+  rareBugChance: 0
   bugSpawns:
   - {fileID: 1948156998}
   - {fileID: 1791514020}
