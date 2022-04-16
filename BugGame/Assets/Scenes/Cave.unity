@@ -20429,7 +20429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_Name
-      value: Ladybug Sign
+      value: Ladybug Sign by entrence
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_Layer
@@ -20476,6 +20476,10 @@ PrefabInstance:
       value: 49.106
       objectReference: {fileID: 0}
     - target: {fileID: 7750397243111347764, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
+      propertyPath: m_Name
+      value: Sign Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
@@ -20519,8 +20523,11 @@ MonoBehaviour:
   NPCCharacter: {fileID: 959089606}
   Name: 
   sentences:
-  - Woah!! I can see now!!
-  - Thankfully there are glowing mushrooms to give us light.
+  - '
+
+
+    Woah!! I can see now!!'
+  - "\nThankfully there are glowing mushrooms to \n\t  give us light."
 --- !u!4 &959089606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5639405848544218604, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
@@ -24952,7 +24959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_Name
-      value: Ladybug Sign (1)
+      value: Ladybug Sign by cave exit
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_Layer
@@ -24997,6 +25004,10 @@ PrefabInstance:
     - target: {fileID: 5639405848544218604, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 49.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
+      propertyPath: m_Name
+      value: Sign Text
       objectReference: {fileID: 0}
     - target: {fileID: 7750397243111347764, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_Layer
@@ -25047,8 +25058,8 @@ MonoBehaviour:
   NPCCharacter: {fileID: 1114517916}
   Name: 
   sentences:
-  - Ready to leave?
-  - Exit here to return to the Hub
+  - "\n\t\n\t Ready to leave?"
+  - "\t\n\n\tExit here to return \n\t\tto the Hub"
 --- !u!65 &1114517920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30093,27 +30104,27 @@ PrefabInstance:
       objectReference: {fileID: 685050382}
     - target: {fileID: 4426975716554247655, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.y
-      value: 2.478256
+      value: 4.092405
       objectReference: {fileID: 0}
     - target: {fileID: 4426975716554247655, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -8.101639
+      value: -6.043817
       objectReference: {fileID: 0}
     - target: {fileID: 4426975718512182973, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.y
-      value: 2.478256
+      value: 4.092405
       objectReference: {fileID: 0}
     - target: {fileID: 4426975718512182973, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -8.101639
+      value: -6.043817
       objectReference: {fileID: 0}
     - target: {fileID: 4426975718535803988, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.y
-      value: 2.478256
+      value: 4.092405
       objectReference: {fileID: 0}
     - target: {fileID: 4426975718535803988, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -8.101639
+      value: -6.043817
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30133,7 +30144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15060468
+      value: 0.1506047
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.y
@@ -30141,7 +30152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.015538725
+      value: -0.015538728
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117282806912, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_Name

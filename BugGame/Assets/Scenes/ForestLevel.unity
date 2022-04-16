@@ -2252,15 +2252,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.72
+      value: 70.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.81
+      value: 1.88
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 41.61
+      value: 41.39
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2343,6 +2343,10 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7750397243111347764, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
+      propertyPath: m_Name
+      value: Sign Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
@@ -2378,7 +2382,7 @@ MonoBehaviour:
   NPCCharacter: {fileID: 342301360}
   Name: 
   sentences:
-  - Woah!! be careful this cave looks dark and scary!!
+  - "\t\nWoah!! be careful this \n  cave looks dark and \n\t\t     scary!!"
 --- !u!65 &342301363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8735,6 +8739,10 @@ PrefabInstance:
       value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7750397243111347764, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
+      propertyPath: m_Name
+      value: Sign Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
@@ -8770,12 +8778,16 @@ MonoBehaviour:
   NPCCharacter: {fileID: 1343605505}
   Name: 
   sentences:
-  - Hello! I'm Lottie and I'll be your guide!
-  - 'To move: WASD'
-  - 'To sprint: Shift + WASD'
-  - 'To jump: Spacebar'
-  - 'To catch flying bugs: Right click to aim and left click to shoot'
-  - 'To catch close bugs: left click'
+  - "\n\tHello! I'm Lottie and I'll be your guide!"
+  - "\t\n\t\t\n\t To move: WASD"
+  - '
+
+
+    To sprint: Shift + WASD'
+  - "\n\n   To jump: Spacebar"
+  - "\n To catch flying bugs: Right click to aim and left click to shoot"
+  - "\n   To catch close bugs: \n           left click"
+  - "\n  Have fun and catch a \n          lottie bugs!!"
 --- !u!65 &1343605508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11771,43 +11783,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.12
+      value: 51.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.55
+      value: 0.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 53.83
+      value: 54.29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9888204
+      value: -0.99930954
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.017445462
+      value: 0.021443898
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.14481264
+      value: 0.010809526
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.030971894
+      value: -0.02835069
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -1.463
+      value: -2.421
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 343.288
+      value: 358.691
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 3.803
+      value: 3.278
       objectReference: {fileID: 0}
     - target: {fileID: -7334541483869665228, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_Layer
@@ -11861,6 +11873,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 5639405848544218604, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639405848544218604, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.179
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639405848544218604, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7750397243111347764, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
+      propertyPath: m_Name
+      value: Sign Text
+      objectReference: {fileID: 0}
     - target: {fileID: 7750397243111347764, guid: 0297deab26a43394caa28325884bb7ed, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -11897,8 +11925,7 @@ MonoBehaviour:
   NPCCharacter: {fileID: 1714481389}
   Name: 
   sentences:
-  - 'Please enter the tree if you want to explore more places. '
-  - 'Will you carry me with you? No ok '
+  - Sorry this level is unavailable
 --- !u!65 &1714481392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19891,27 +19918,27 @@ PrefabInstance:
       objectReference: {fileID: 1419726414}
     - target: {fileID: 4426975716554247655, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.y
-      value: 3.51844
+      value: 4.395782
       objectReference: {fileID: 0}
     - target: {fileID: 4426975716554247655, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -6.779218
+      value: -5.577679
       objectReference: {fileID: 0}
     - target: {fileID: 4426975718512182973, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.y
-      value: 3.51844
+      value: 4.395782
       objectReference: {fileID: 0}
     - target: {fileID: 4426975718512182973, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -6.779218
+      value: -5.577679
       objectReference: {fileID: 0}
     - target: {fileID: 4426975718535803988, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.y
-      value: 3.51844
+      value: 4.395782
       objectReference: {fileID: 0}
     - target: {fileID: 4426975718535803988, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_FollowOffset.z
-      value: -6.779218
+      value: -5.577679
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19927,19 +19954,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.110962115
+      value: -0.11096141
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.016953709
+      value: -0.016953602
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.98228085
+      value: -0.98228097
       objectReference: {fileID: 0}
     - target: {fileID: 7565472116871430432, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.15008098
+      value: 0.15008104
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117282806912, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_Name
@@ -19991,47 +20018,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117363029440, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.10980488
+      value: -0.109804206
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117363029440, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.02330035
+      value: -0.023300212
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117363029440, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9720366
+      value: -0.97203666
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117363029440, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.20626397
+      value: 0.20626405
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565472117510948177, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.65279007
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565472117873371556, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.65279007
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117873371556, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.10980488
+      value: -0.109804206
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117873371556, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.023300348
+      value: -0.02330022
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117873371556, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9720366
+      value: -0.97203666
       objectReference: {fileID: 0}
     - target: {fileID: 7565472117873371556, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.20626397
+      value: 0.20626405
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565472118247124657, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.11043033
       objectReference: {fileID: 0}
     - target: {fileID: 7565472118247124657, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.020124823
+      value: -0.020124704
       objectReference: {fileID: 0}
     - target: {fileID: 7565472118247124657, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9775794
+      value: -0.9775795
       objectReference: {fileID: 0}
     - target: {fileID: 7565472118247124657, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.17815295
+      value: 0.17815302
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
