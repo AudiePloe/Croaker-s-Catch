@@ -69,10 +69,24 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 // play jump animation here
+                {
+
+                    if (isGrounded && velocity.y < 0)//Added by Humberto
+                    {//Added by Humberto
+                        FrogController.SetBool("isJumping", true);//Added by Humberto
+                        FrogController.SetBool("isFalling", true);//Added by Humberto
+                    }//Added by Humberto
+
+                }
 
                 jumpSound.Play();
                 velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
             }
+            else//Added by Humberto
+            {//Added by Humberto
+                FrogController.SetBool("isJumping", false);//Added by Humberto
+                FrogController.SetBool("isFalling", false);//Added by Humberto
+            }//Added by Humberto
 
 
             //gravity
