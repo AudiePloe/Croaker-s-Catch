@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class BugScript : MonoBehaviour
 {
+    public GameObject canvasObject;
+
     public AudioSource skitterSound;
 
     public GameObject lightSource;
@@ -76,6 +78,8 @@ public class BugScript : MonoBehaviour
         if(Vector3.Distance(player.position, transform.position) <= runProxy && idle == true)
         {
             //print("AI Running");
+
+            canvasObject.SetActive(true);
 
             skitterSound.Play();
 
