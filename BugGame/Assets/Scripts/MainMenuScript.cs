@@ -80,4 +80,10 @@ public class MainMenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("CavePage");
     }
+
+    public void SettingsMenu()
+    {
+        SceneManager.LoadScene("SettingsMenu");
+    }
+
 }

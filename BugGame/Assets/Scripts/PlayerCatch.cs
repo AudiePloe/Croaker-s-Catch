@@ -12,7 +12,7 @@ public class PlayerCatch : MonoBehaviour
     bool swing = false;
 
     public float swingRate;
-    public float time = 10f;
+    float time = 10f;
 
 
     void Start()
