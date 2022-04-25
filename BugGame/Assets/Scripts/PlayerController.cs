@@ -143,11 +143,14 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftControl) && isGrounded)
             {
                 // play crouch animation here
+                FrogController.SetBool("isCrouching", true);//Added by Humberto
+                FrogController.SetBool("isCrouchingIdle", true);//Added by Humberto
                 isCrouched = true;
             }
             else
             {
-               
+                FrogController.SetBool("isCrouching", false);//Added by Humberto
+                FrogController.SetBool("isCrouchingIdle", false);//Added by Humberto
                 isCrouched = false;
             }
 
