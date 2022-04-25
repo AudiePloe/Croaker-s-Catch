@@ -24,7 +24,7 @@ public class LevelChanger : MonoBehaviour
         
     }
 
-    IEnumerator LoadAsynch(string level)
+    IEnumerator LoadAsynch(string level) // loads level asynch so that loading screen can show progress
     {
         loadingScreen.SetActive(true);
 

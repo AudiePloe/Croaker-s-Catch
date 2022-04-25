@@ -53,13 +53,13 @@ public class FPSView : MonoBehaviour
                 playerModel.SetActive(false);
                 crosshairs.SetActive(true);
 
-                float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+                float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime; // get mouse postions with movement
                 float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
                 xRotation -= mouseY;
-                FPC.localRotation = Quaternion.Euler(Mathf.Clamp(xRotation, minCameraAngle, maxCameraAngle), 0f, 0f);
+                FPC.localRotation = Quaternion.Euler(Mathf.Clamp(xRotation, minCameraAngle, maxCameraAngle), 0f, 0f); // apply rotation to player controller
 
-                transform.Rotate(Vector3.up * mouseX);
+                transform.Rotate(Vector3.up * mouseX); // rotate the camera
 
 
             }

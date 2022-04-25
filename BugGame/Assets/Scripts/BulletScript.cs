@@ -41,10 +41,10 @@ public class BulletScript : MonoBehaviour
                 GameDataStatic.firefly++;
             }
 
-            col.gameObject.GetComponent<BugScript>().DestroyBug();
+            col.gameObject.GetComponent<BugScript>().DestroyBug(); // destroy the bug gameobject
         }
 
-        Destroy(gameObject);
+        Destroy(gameObject); // destroy the bullet
     }
 
 }

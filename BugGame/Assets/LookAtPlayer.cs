@@ -9,12 +9,12 @@ public class LookAtPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>(); // finds the camera
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player);
+        transform.LookAt(player); // makes object look at "player" position
     }
 }

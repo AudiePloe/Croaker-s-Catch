@@ -103,7 +103,19 @@ public class PlayerController : MonoBehaviour
             {
 
                 // play walk animation here
-                FrogController.SetBool("isWalking", true);
+
+                if(Input.GetKey(KeyCode.LeftControl))
+                {
+                    FrogController.SetBool("isCrouching", true);
+                    FrogController.SetBool("isWalking", false);
+                }
+                else
+                {
+                    FrogController.SetBool("isCrouching", false);
+                    FrogController.SetBool("isWalking", true);
+                }
+
+                
 
                 // walking sound here
 
@@ -126,30 +138,27 @@ public class PlayerController : MonoBehaviour
                 FrogController.SetBool("isRunning", true);
                 if(speed < sprintSpeed)
                 {
+                    print("accelerate");
                     speed += movementAcceleration;
                 }
 
             }
-            else if(isCrouched)
-            {
-                speed = crouchSpeed;
-            }
             else
             {
-                FrogController.SetBool("isRunning", false);
                 speed = walkSpeed;
+                FrogController.SetBool("isRunning", false);
             }
+           
 
             if (Input.GetKey(KeyCode.LeftControl) && isGrounded)
             {
                 // play crouch animation here
-                FrogController.SetBool("isCrouching", true);//Added by Humberto
                 FrogController.SetBool("isCrouchingIdle", true);//Added by Humberto
+                speed = crouchSpeed;
                 isCrouched = true;
             }
             else
             {
-                FrogController.SetBool("isCrouching", false);//Added by Humberto
                 FrogController.SetBool("isCrouchingIdle", false);//Added by Humberto
                 isCrouched = false;
             }
