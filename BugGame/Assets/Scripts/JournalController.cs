@@ -28,24 +28,24 @@ public class JournalController : MonoBehaviour
     void Update()
     {
         
-        if(joernalAlert)
+        if(joernalAlert) // if any bug is cought
         {
             iconAlert.SetActive(true);
             joernalAlertIcon.SetActive(true);
         }
 
-        if(forestAlert)
+        if(forestAlert) // if a bug belonging to the forest is cought
         {
             forestAlertIcon.SetActive(true);
         }
 
-        if (caveAlert)
+        if (caveAlert) // if a bug belonging to the cave is cought
         {
             caveAlertIcon.SetActive(true);
         }
 
 
-        if(forestTrigger.activeInHierarchy)
+        if(forestTrigger.activeInHierarchy) // when the player opens the page remove the alerts
         {
             iconAlert.SetActive(false);
             joernalAlertIcon.SetActive(false);
@@ -57,7 +57,7 @@ public class JournalController : MonoBehaviour
         }
 
 
-        if (caveTrigger.activeInHierarchy)
+        if (caveTrigger.activeInHierarchy) // when the player opens the page remove the alerts
         {
             iconAlert.SetActive(false);
             joernalAlertIcon.SetActive(false);
@@ -71,11 +71,11 @@ public class JournalController : MonoBehaviour
 
     }
 
-    public void checkAlerts()
+    public void checkAlerts() // check if any bugs have been caught for the first time.
     {
        string alert = GameDataStatic.sendAlert();
 
-        if(alert == "NONE")
+        if(alert == "NONE") // if none then stop
         {
             return;
         }

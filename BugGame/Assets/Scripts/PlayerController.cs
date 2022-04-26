@@ -58,13 +58,26 @@ public class PlayerController : MonoBehaviour
         if (canMove)
         {
 
-            //jump
+            // checking if on ground ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
             if (isGrounded && velocity.y < 0)
             {
                 velocity.y = -2f;
             }
+
+
+            // adding gravity ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            //gravity
+            velocity.y += gravity * Time.deltaTime;
+            controller.Move(velocity * Time.deltaTime);
+
+
+
+
+            // player is trying to jump ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
@@ -89,10 +102,12 @@ public class PlayerController : MonoBehaviour
             }//Added by Humberto
 
 
-            //gravity
-            velocity.y += gravity * Time.deltaTime;
-            controller.Move(velocity * Time.deltaTime);
 
+
+
+
+            // player walking ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            
 
             //walk
             float horizontal = Input.GetAxisRaw("Horizontal");
@@ -103,19 +118,7 @@ public class PlayerController : MonoBehaviour
             {
 
                 // play walk animation here
-
-                if(Input.GetKey(KeyCode.LeftControl))
-                {
-                    FrogController.SetBool("isCrouching", true);
-                    FrogController.SetBool("isWalking", false);
-                }
-                else
-                {
-                    FrogController.SetBool("isCrouching", false);
-                    FrogController.SetBool("isWalking", true);
-                }
-
-                
+                FrogController.SetBool("isWalking", true);
 
                 // walking sound here
 
@@ -132,7 +135,14 @@ public class PlayerController : MonoBehaviour
             }
 
 
-            if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
+
+
+
+
+            // player running ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+            if (Input.GetKey(KeyCode.LeftShift) && isGrounded && direction.magnitude >= 0.1f)
             {
                 // running sound here
                 FrogController.SetBool("isRunning", true);
@@ -148,11 +158,33 @@ public class PlayerController : MonoBehaviour
                 speed = walkSpeed;
                 FrogController.SetBool("isRunning", false);
             }
-           
 
-            if (Input.GetKey(KeyCode.LeftControl) && isGrounded)
+
+
+
+
+            // player crouching ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+            if (Input.GetKey(KeyCode.LeftControl) && direction.magnitude >= 0.1f)
+            {
+                FrogController.SetBool("isCrouching", true);
+                FrogController.SetBool("isWalking", false);
+            }
+            else
+            {
+                FrogController.SetBool("isCrouching", false);
+            }
+
+
+
+
+
+            if (Input.GetKey(KeyCode.LeftControl))// && isGrounded)
             {
                 // play crouch animation here
+
+                print("Playercrouch");
+
                 FrogController.SetBool("isCrouchingIdle", true);//Added by Humberto
                 speed = crouchSpeed;
                 isCrouched = true;

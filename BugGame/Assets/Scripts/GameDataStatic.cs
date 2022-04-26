@@ -28,6 +28,8 @@ public static class GameDataStatic
 
     // journal system ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+        // bug alerts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+
     static bool mothAlert = false;
     static bool jewelAlert = false;
     static bool fireflyAlert = false;
@@ -133,7 +135,7 @@ public static class GameDataStatic
 
 
 
-        return ("NONE");
+        return ("NONE"); // if none were caught
     }
 
 
