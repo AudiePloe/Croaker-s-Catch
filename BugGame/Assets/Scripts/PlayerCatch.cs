@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerCatch : MonoBehaviour
 {
+    public JournalController journalcontrol;
     public PlayerController PC;
     public Animator FrogController;
     public Text bugsCaughtText;
@@ -72,31 +73,63 @@ public class PlayerCatch : MonoBehaviour
 
         if(col.gameObject.tag == "Bug" && swing)
         {
-            print("PlayerCaughtBug");
-            GameDataStatic.bugsCaught++;
-
-            if(col.gameObject.name == "Moth(Clone)")
-            {
-                GameDataStatic.moths++;
-            } 
-            else if (col.gameObject.name == "LargeBeetle(Clone)")
-            {
-                GameDataStatic.largeBeetle++;
-            }
-            else if (col.gameObject.name == "MediumBeetle(Clone)")
-            {
-                GameDataStatic.medBeetle++;
-            }
-            else if (col.gameObject.name == "FireflyBeetle(Clone)")
-            {
-                GameDataStatic.firefly++;
-            }
-
-
-            BugScript bs = col.GetComponent<BugScript>();
-            bs.DestroyBug();
-
+            addBug(col.gameObject);
         }
     }
+
+    public void addBug(GameObject bug)
+    {
+        print("PlayerCaughtBug");
+        GameDataStatic.bugsCaught++;
+
+        if (bug.name == "Moth(Clone)")
+        {
+            GameDataStatic.moths++;
+        }
+        else if (bug.name == "JewelBeetle(Clone)")
+        {
+            GameDataStatic.jewelBeetle++;
+        }
+        else if (bug.name == "FireflyBeetle(Clone)")
+        {
+            GameDataStatic.firefly++;
+        }
+        else if (bug.name == "Rhinobeetle(Clone)")
+        {
+            GameDataStatic.rhinobeetle++;
+        }
+        else if (bug.name == "Ladybug(Clone)")
+        {
+            GameDataStatic.ladybug++;
+        }
+        else if (bug.name == "Bee(Clone)")
+        {
+            GameDataStatic.bee++;
+        }
+        else if (bug.name == "Butterfly(Clone)")
+        {
+            GameDataStatic.butterfly++;
+        }
+        else if (bug.name == "Psudoscorpian(Clone)")
+        {
+            GameDataStatic.scorpian++;
+        }
+        else if (bug.name == "Snail(Clone)")
+        {
+            GameDataStatic.snail++;
+        }
+        else if (bug.name == "Spider(Clone)")
+        {
+            GameDataStatic.spider++;
+        }
+
+        bug.GetComponent<BugScript>().DestroyBug();
+
+
+        journalcontrol.checkAlerts();
+    }
+
+
+
 
 }

@@ -95,6 +95,7 @@ public class BugSpawner2 : MonoBehaviour
 
     void getStationaryBug() // sets random stationary bug active in game
     {
+        stationaryBugsSpawned++;
         GameObject newBug = stationaryBugList[Random.Range(0, stationaryBugList.Count)];
         stationaryBugList.Remove(newBug);
         newBug.SetActive(true);

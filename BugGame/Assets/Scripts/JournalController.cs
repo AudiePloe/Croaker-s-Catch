@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class JournalController : MonoBehaviour
 {
-    bool alertIcon;
+    bool joernalAlert;
+    bool forestAlert;
+    bool caveAlert;
 
-
-
+    public GameObject joernalAlertIcon;
+    public GameObject forestAlertIcon;
+    public GameObject caveAlertIcon;
 
 
     void Start()
@@ -20,4 +23,14 @@ public class JournalController : MonoBehaviour
     {
         
     }
+
+    public void checkAlerts()
+    {
+
+    }
+    
+
+
+
+
 }
