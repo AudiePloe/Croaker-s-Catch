@@ -26,6 +26,7 @@ public class FPSView : MonoBehaviour
     public Transform netGunBarrel;
     public float netSpeed;
     public float fireRate;
+    public AudioSource shootGun;
     float time = 10f;
 
     void Start()
@@ -82,7 +83,10 @@ public class FPSView : MonoBehaviour
                     Rigidbody netClone = (Rigidbody)Instantiate(net, netGunBarrel.position, netGunBarrel.rotation);
                     netClone.GetComponent<Rigidbody>().AddForce(netGunBarrel.forward * netSpeed);
 
+                    shootGun.Play();
+
                     time = 0f;
+
                 }
             }
 

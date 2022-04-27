@@ -8,17 +8,24 @@ public class PlayerCatch : MonoBehaviour
     public JournalController journalcontrol;
     public PlayerController PC;
     public Animator FrogController;
+    public AudioSource swingNetSound;
+    public AudioSource bugCaught;
     public Text bugsCaughtText;
     public int bugsCaught = 0;
     bool swing = false;
 
     public float swingRate;
+
+    public bool canSwing;
+
     float time = 10f;
+    FPSView fps;
 
 
     void Start()
     {
-
+        canSwing = true;
+        fps = GetComponent<FPSView>();
     }
 
     // Update is called once per frame
@@ -28,7 +35,7 @@ public class PlayerCatch : MonoBehaviour
         swing = false;
 
 
-        if(Input.GetKey(KeyCode.Mouse0) && time >= swingRate && PC.isGrounded)
+        if(Input.GetKey(KeyCode.Mouse0) && time >= swingRate && PC.isGrounded && !fps.isAiming && canSwing)
         {
             // play animation for swinging net
             PC.canMove = false;
@@ -36,8 +43,10 @@ public class PlayerCatch : MonoBehaviour
 
             print("PlayerSwing");
             swing = true;
-            Invoke("swingNet", swingRate);
-            
+            swingNetSound.Play();
+            time = 0;
+            Invoke("swingNet", 0.35f);
+
         }
         
 
@@ -46,7 +55,8 @@ public class PlayerCatch : MonoBehaviour
 
     void swingNet()
     {
-        time = 0;
+        
+        
         PC.canMove = true;
         FrogController.SetBool("isCatching", false);
     }
@@ -79,6 +89,8 @@ public class PlayerCatch : MonoBehaviour
 
     public void addBug(GameObject bug)
     {
+        bugCaught.Play();
+
         print("PlayerCaughtBug");
         GameDataStatic.bugsCaught++;
 
