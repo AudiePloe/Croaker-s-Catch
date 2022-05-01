@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public AudioSource walkSound;
     public AudioSource runSound;
     public AudioSource jumpSound;
+    public AudioSource croakSound;
+    public float timeBetweenCroak;
 
     [Header("GameObjects")]
     public CharacterController controller;
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
     
     float turnSmoothVelocity;
+    float time;
     
 
     private void Awake()
@@ -55,6 +58,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+
+
+        if(time >= timeBetweenCroak)
+        {
+            croakSound.Play();
+            time = 0;
+        }
+
+
         if (canMove)
         {
 
