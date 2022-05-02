@@ -248,6 +248,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d691227370d26346b64147003738f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  slider: {fileID: 0}
+  progressText: {fileID: 0}
 --- !u!1 &335694081
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: -22}
+  m_AnchoredPosition: {x: 8, y: -146}
   m_SizeDelta: {x: 320, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695803753
@@ -1076,18 +1079,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Roger Munoz\n\nAjahana Smith\r\n\nAracely Garcia\r\n\nAudie Ploe\r\n\n\n\n\n\nAudie
-    Ploe\nWesley Winchester\nRoger Munoz\n\n\n\n\n\nAracely Garcia \nHumberto Garcia\nRoger
+  m_Text: "Roger Munoz\n\nAjahana Smith\r\n\nAracely Garcia\r\n\nAudie Ploe\r\n\n\n\n\n\n\n\n\n\nAudie
+    Ploe\n\nWesley Winchester\nRoger Munoz\n\n\n\n\n\nAracely Garcia \nHumberto Garcia\nRoger
     Munoz\nAjahana Smith\nWesley Winchester\r\n\n\nAracely Garcia\nHumberto Garcia\nRoger
     Munoz\nAjahana Smith\nWesley Winchester\r\n\n\nAracely Garcia \nHumberto Garcia\nRoger
-    Munoz\nAjahana Smith\r\n\r\n\nJarad Heidelberg \r\nWesley Winchester\n\n\nJarad
+    Munoz\nAjahana Smith\r\n\r\n\n\n\n\n\nJarad Heidelberg \r\nWesley Winchester\n\n\nJarad
     Heidelberg\r\nAjahana Smith\n\n\nJarad Heidelberg\nWesley Winchester\nAjahana
     Smith\nAudie Ploe\n\nHumberto Garcia\nWesley Winchester\r\n\rRoger Munoz\n\nAjahana
     Smith\nWesley Winchester\r\nAracely Garcia\n\n\n\n\n\nMagic Gamble Sample \nby
-    MrtheNoronha https://freesound.org/people/Mrthenoronha/sounds/514878/\n\n\nFlock
-    Bebop Sample \nby MrtheNoronha\nhttps://freesound.org/people/Mrthenoronha/sounds/528717/\n\n\nNostalgic
-    Ending Credits\nby tyops\nhttps://freesound.org/people/tyops/sounds/562770/\n\n\n\nBit
-    Forest Intro\nby Bertsz\nhttps://freesound.org/people/Bertsz/sounds/545457/\n\n\n\n"
+    MrtheNoronha \nfreesound.org\n\nFlock Bebop Sample \nby MrtheNoronha\nfreesound.org\n\nNostalgic
+    Ending Credits\nby tyops\nfreesound.org\n\n\nBit Forest Intro\nby Bertsz\nfreesound.org\n\nBall
+    Catch \nby ToastHatter\nfreesound.org\n\n\nStore \nby kbrecordzz\nfreesound.org\n\n"
 --- !u!222 &911277742
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1095,6 +1097,164 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911277739}
+  m_CullTransparentMesh: 1
+--- !u!1 &1078664879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1078664880}
+  - component: {fileID: 1078664882}
+  - component: {fileID: 1078664881}
+  m_Layer: 5
+  m_Name: Programmerstext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1078664880
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078664879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1585623721}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 8, y: 127}
+  m_SizeDelta: {x: 320, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1078664881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078664879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ec9e70fe494a1e344be5cc1570c3febd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Programmers
+--- !u!222 &1078664882
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078664879}
+  m_CullTransparentMesh: 1
+--- !u!1 &1179165879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1179165880}
+  - component: {fileID: 1179165882}
+  - component: {fileID: 1179165881}
+  m_Layer: 5
+  m_Name: LevelDesigners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1179165880
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179165879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1585623721}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 8, y: -807}
+  m_SizeDelta: {x: 320, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1179165881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179165879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ec9e70fe494a1e344be5cc1570c3febd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Level Designers
+--- !u!222 &1179165882
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179165879}
   m_CullTransparentMesh: 1
 --- !u!1 &1247348211
 GameObject:
@@ -1361,14 +1521,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Product Owner\n  \r\nProject Manager\n\r\nArt Director\n\nLead Programmer\n\n\n\n\n\nProgrammers\n\n\n\n\n\n\n\n3D
-    Modelers\r\r\n\n\n\n\n\n\nAnimators\r\r\n\n\n\n\n\n\nConcept Artist\r\r\n\r\n\n\n\n\nLevel
-    Designer\n\n\n\nQA\n\n\n\nAssets Importer\r \n\r\n\n\n\nAudio \r\n\n\r\n\nQuality
-    Checkers\n\n\n\n\nMusic Used\n\n\nJump C 03\nby cabled_mess\nhttps://freesound.org/people/cabled_mess/sounds/350903/\n\nSkittering
-    bugs\nby Mendenhall02\nhttps://freesound.org/people/Mendenhall02/sounds/521869/\n\nSoft
-    Upright Piano Loop 1(E minor)\nby deadrobotmusic\nhttps://freesound.org/people/deadrobotmusic/sounds/575477/\n\nhttps://opengameart.org/\nCleyton
-    Kauffman - https://soundcloud.com/cleytonkauffman\n\nAmbiance Natural Forest
-    Birds Wind Loop\nby Nox_Sound\nhttps://freesound.org/people/Nox_Sound/sounds/570492/"
+  m_Text: "Product Owner\n  \r\nProject Manager\n\r\nArt Director\n\nLead Programmer\n\n\n\n\n\n\n\n\n\nLead
+    Programmer\n\nProgrammers\n\n\n\n\n\n\n\n3D Modelers\r\r\n\n\n\n\n\n\nAnimators\r\r\n\n\n\n\n\n\nConcept
+    Artist\r\r\n\r\n\n\n\n\n\n\n\nLevel Designer\n\n\n\nQA\n\n\n\nAssets Importer\r
+    \n\r\n\n\n\nAudio \r\n\n\r\n\nQuality Checkers\n\n\n\n\nMusic Used\n\n\nJump
+    C 03\nby cabled_mess\nfreesound.org\n\nSkittering bugs\nby Mendenhall02\nfreesound.org\n\nSoft
+    Upright Piano Loop 1(E minor)\nby deadrobotmusic\nfreesound.org\n\nUnderwater
+    Theme\nby Cleyton Kauffman\nsoundcloud.com\n\nAmbiance Natural Forest Birds Wind
+    Loop\nby Nox_Sound\nfreesound.org\n\nWhoosh\nby qubodup\nfreesound.org\n\n01904
+    air swoosh \nby RobinHood76\nfreesound.org"
 --- !u!222 &1416582325
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1487,6 +1648,8 @@ RectTransform:
   - {fileID: 832134479}
   - {fileID: 2046230690}
   - {fileID: 695803752}
+  - {fileID: 1078664880}
+  - {fileID: 1179165880}
   m_Father: {fileID: 1290266390}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1942,7 +2105,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56, y: -2328}
+  m_AnchoredPosition: {x: 188, y: -2402}
   m_SizeDelta: {x: 235.9728, y: 166.4412}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2086765709
