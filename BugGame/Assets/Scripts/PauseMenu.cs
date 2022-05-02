@@ -62,7 +62,7 @@ public class PauseMenu : MonoBehaviour
     void Pause ()
     {
         playerCatch.canSwing = false;
-        journalObjects.SetActive(true);
+        //journalObjects.SetActive(true);
         playerFPS.canAim = false;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
