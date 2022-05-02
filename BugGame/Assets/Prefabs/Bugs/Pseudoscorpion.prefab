@@ -269,7 +269,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 753170b7ba7e0c540bc34198d84051e6, type: 2}
+  - {fileID: 2100000, guid: 6a8478eec4a1d6d4782ef5eb6c51e09a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -691,6 +691,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pseudoscorpion @ Tpose
       objectReference: {fileID: 0}
+    - target: {fileID: 2467845160856802280, guid: 2b681bde38d2b774a87b5dc1355a7c48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2560741472623453248, guid: 2b681bde38d2b774a87b5dc1355a7c48, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 6938437322152404763, guid: 2b681bde38d2b774a87b5dc1355a7c48, type: 3}
+    - target: {fileID: 2560741472623453248, guid: 2b681bde38d2b774a87b5dc1355a7c48, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a8478eec4a1d6d4782ef5eb6c51e09a, type: 2}
     - target: {fileID: 5866666021909216657, guid: 2b681bde38d2b774a87b5dc1355a7c48, type: 3}
       propertyPath: m_Controller
       value: 
