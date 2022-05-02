@@ -139,4 +139,40 @@ public static class GameDataStatic
     }
 
 
+    public static void resetParameters()
+    {
+        mothAlert = false;
+        jewelAlert = false;
+        fireflyAlert = false;
+        dragonflyAlert = false;
+        ladybugAlert = false;
+        rhinoAlert = false;
+        snailAlert = false;
+        scorpianAlert = false;
+        spiderAlert = false;
+        beeAlert = false;
+        butterflyAlert = false;
+
+
+
+        bugsCaught = 0;
+        moths = 0;
+        jewelBeetle = 0;
+        firefly = 0;
+        dragonfly = 0;
+        ladybug = 0;
+        rhinobeetle = 0;
+        snail = 0;
+        scorpian = 0;
+        spider = 0;
+        bee = 0;
+        butterfly = 0;
+
+
+    }
+
+
+
+
+
 }
