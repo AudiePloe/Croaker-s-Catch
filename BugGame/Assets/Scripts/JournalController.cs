@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class JournalController : MonoBehaviour
 {
+
+    
+
     bool joernalAlert;
     bool forestAlert;
     bool caveAlert;
@@ -17,6 +20,7 @@ public class JournalController : MonoBehaviour
     [Header("Alert Triggers")]
     public GameObject forestTrigger;
     public GameObject caveTrigger;
+    public GameObject journal;
 
     [Header("BugIcons")]
     public FlipSprite LadyBug;
@@ -26,7 +30,7 @@ public class JournalController : MonoBehaviour
     public FlipSprite Dragonfly;
     public FlipSprite Butterfly;
     public FlipSprite Bee;
-    public FlipSprite Scorpian;
+    public FlipSprite scorpion;
     public FlipSprite Firefly;
     public FlipSprite Spider;
     public FlipSprite Snail;
@@ -35,11 +39,9 @@ public class JournalController : MonoBehaviour
 
     void Awake()
     {
-        
-        for(int i = 0; i < 12; i++) // run for every bug in game to make sure UI is up to date
-        {
-            checkAlerts();
-        }
+
+        UpdateIcons();
+
 
         if(GameDataStatic.bugsCaught == 0)
         {
@@ -47,12 +49,20 @@ public class JournalController : MonoBehaviour
         }
 
 
-
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
+        if (!journal.activeInHierarchy)
+        {
+            forestTrigger.SetActive(false);
+            caveTrigger.SetActive(false);
+        }
+
+
         
         if(joernalAlert) // if any bug is cought
         {
@@ -160,7 +170,7 @@ public class JournalController : MonoBehaviour
 
         if (alert.Item2 == "scorp")
         {
-            Scorpian.SwapPic();
+            scorpion.SwapPic();
         }
 
         if (alert.Item2 == "fire")
@@ -186,6 +196,72 @@ public class JournalController : MonoBehaviour
     }
     
 
+    void UpdateIcons()
+    {
+        if(GameDataStatic.ladybug > 0)
+        {
+            LadyBug.SwapPic();
+        }
+
+        if (GameDataStatic.moths > 0)
+        {
+            Moth.SwapPic();
+        }
+
+        if (GameDataStatic.jewelBeetle > 0)
+        {
+            Jbeetle.SwapPic();
+        }
+
+        if (GameDataStatic.rhinobeetle > 0)
+        {
+            Rhino.SwapPic();
+        }
+
+        if (GameDataStatic.dragonfly > 0)
+        {
+            Dragonfly.SwapPic();
+        }
+
+        if (GameDataStatic.butterfly > 0)
+        {
+            Butterfly.SwapPic();
+        }
+
+        if (GameDataStatic.bee > 0)
+        {
+            Bee.SwapPic();
+        }
+
+        if (GameDataStatic.scorpion > 0)
+        {
+            scorpion.SwapPic();
+        }
+
+        if (GameDataStatic.firefly > 0)
+        {
+            Firefly.SwapPic();
+        }
+
+        if (GameDataStatic.spider > 0)
+        {
+            Spider.SwapPic();
+        }
+
+        if (GameDataStatic.snail > 0)
+        {
+            Snail.SwapPic();
+        }
+
+
+    }
+
+
+
+
+
+
+
     void resetIcons()
     {
         LadyBug.resetImages();
@@ -195,7 +271,7 @@ public class JournalController : MonoBehaviour
         Dragonfly.resetImages();
         Butterfly.resetImages();
         Bee.resetImages();
-        Scorpian.resetImages();
+        scorpion.resetImages();
         Firefly.resetImages();
         Spider.resetImages();
         Snail.resetImages();

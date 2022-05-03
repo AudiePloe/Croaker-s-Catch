@@ -4,6 +4,17 @@ using UnityEngine;
 
 public static class GameDataStatic
 {
+
+    // General Game Data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    public static string playerCameFrom { get; set; }
+
+
+
+
+
+
+
     //Overall bugs caught ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     public static int bugsCaught    { get; set; }
 

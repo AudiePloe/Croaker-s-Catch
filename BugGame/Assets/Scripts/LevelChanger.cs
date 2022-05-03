@@ -13,6 +13,10 @@ public class LevelChanger : MonoBehaviour
     public Text progressText;
 
 
+    public string playerComeFrom;
+
+
+
     void Start()
     {
 

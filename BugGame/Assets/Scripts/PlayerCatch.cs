@@ -32,7 +32,7 @@ public class PlayerCatch : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        swing = false;
+        
 
 
         if(Input.GetKey(KeyCode.Mouse0) && time >= swingRate && PC.isGrounded && !fps.isAiming && canSwing)
@@ -47,6 +47,10 @@ public class PlayerCatch : MonoBehaviour
             time = 0;
             Invoke("swingNet", 0.35f);
 
+        }
+        else
+        {
+            swing = false;
         }
         
 
