@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class JournalController : MonoBehaviour
 {
 
-    
+
+    public bool winRightNow = false;
 
     bool joernalAlert;
     bool forestAlert;
@@ -34,6 +36,13 @@ public class JournalController : MonoBehaviour
     public FlipSprite Firefly;
     public FlipSprite Spider;
     public FlipSprite Snail;
+
+
+    [Header("Misc")]
+    public UnityEvent WinEvent;
+    public UnityEvent ResumeEvent;
+
+
 
 
 
@@ -189,7 +198,10 @@ public class JournalController : MonoBehaviour
         }
 
 
-
+        if(GameDataStatic.CanWinGame() || winRightNow)
+        {
+            WinEvent.Invoke();
+        }
 
 
         return;
@@ -260,8 +272,6 @@ public class JournalController : MonoBehaviour
 
 
 
-
-
     void resetIcons()
     {
         LadyBug.resetImages();
@@ -275,6 +285,12 @@ public class JournalController : MonoBehaviour
         Firefly.resetImages();
         Spider.resetImages();
         Snail.resetImages();
+    }
+
+
+    public void resumeGame()
+    {
+        winRightNow = false;
     }
 
 
