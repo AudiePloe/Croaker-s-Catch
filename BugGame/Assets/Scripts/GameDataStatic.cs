@@ -15,7 +15,7 @@ public static class GameDataStatic
     public static int ladybug       { get; set; }
     public static int rhinobeetle   { get; set; }
     public static int snail         { get; set; }
-    public static int scorpian      { get; set; }
+    public static int scorpion      { get; set; }
     public static int spider        { get; set; }
     public static int bee           { get; set; }
     public static int butterfly     { get; set; }
@@ -37,19 +37,19 @@ public static class GameDataStatic
     static bool ladybugAlert = false;
     static bool rhinoAlert = false;
     static bool snailAlert = false;
-    static bool scorpianAlert = false;
+    static bool scorpionAlert = false;
     static bool spiderAlert = false;
     static bool beeAlert = false;
     static bool butterflyAlert = false;
 
 
 
-    public static string sendAlert() // checks if any new bugs have been caught, if so, returns the biome in which they are found in.
+    public static (string, string) sendAlert() // checks if any new bugs have been caught, if so, returns the biome in which they are found in.
     {
 
         //The Forest: Ladybug, Moth, Jewel Beetle, Rhino , dragonfly, Butterfly, bee
 
-        //Cave bugs inside: Psudeoscorpian, Firefly, Spider, Snail
+        //Cave bugs inside: Psudeoscorpion, Firefly, Spider, Snail
 
         //Flower Level Bugs: Ladybug, Bee, Moth (flower not confirmed)
 
@@ -60,70 +60,70 @@ public static class GameDataStatic
         if (ladybug > 0 && ladybugAlert == false)
         {
             ladybugAlert = true;
-            return ("FOREST");
+            return ("FOREST", "ladybug");
         }
 
         if (moths > 0 && mothAlert == false)
         {
             mothAlert = true;
-            return ("FOREST");
+            return ("FOREST", "moth");
         }
 
         if (jewelBeetle > 0 && jewelAlert == false)
         {
             jewelAlert = true;
-            return ("FOREST");
+            return ("FOREST", "jewel");
         }
         if (rhinobeetle > 0 && rhinoAlert == false)
         {
             rhinoAlert = true;
-            return ("FOREST");
+            return ("FOREST", "rhino");
         }
 
         if (dragonfly > 0 && dragonflyAlert == false)
         {
             dragonflyAlert = true;
-            return ("FOREST");
+            return ("FOREST", "dragon");
         }
 
         if (butterfly > 0 && butterflyAlert == false)
         {
             butterflyAlert = true;
-            return ("FOREST");
+            return ("FOREST", "butter");
         }
 
         if (bee > 0 && beeAlert == false)
         {
             beeAlert = true;
-            return ("FOREST");
+            return ("FOREST", "bee");
         }
 
 
 
         // cave bugs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        if (scorpian > 0 && scorpianAlert == false)
+        if (scorpion > 0 && scorpionAlert == false)
         {
-            scorpianAlert = true;
-            return ("CAVE");
+            scorpionAlert = true;
+            return ("CAVE", "scorp");
         }
 
         if (firefly > 0 && fireflyAlert == false)
         {
             fireflyAlert = true;
-            return ("CAVE");
+            return ("CAVE", "fire");
         }
 
         if (spider > 0 && spiderAlert == false)
         {
             spiderAlert = true;
-            return ("CAVE");
+            return ("CAVE", "spider");
         }
 
         if (snail > 0 && snailAlert == false)
         {
             snailAlert = true;
-            return ("CAVE");
+            return ("CAVE", "snail");
         }
 
 
@@ -135,7 +135,7 @@ public static class GameDataStatic
 
 
 
-        return ("NONE"); // if none were caught
+        return ("NONE", "NONE"); // if none were caught
     }
 
 
@@ -148,7 +148,7 @@ public static class GameDataStatic
         ladybugAlert = false;
         rhinoAlert = false;
         snailAlert = false;
-        scorpianAlert = false;
+        scorpionAlert = false;
         spiderAlert = false;
         beeAlert = false;
         butterflyAlert = false;
@@ -163,7 +163,7 @@ public static class GameDataStatic
         ladybug = 0;
         rhinobeetle = 0;
         snail = 0;
-        scorpian = 0;
+        scorpion = 0;
         spider = 0;
         bee = 0;
         butterfly = 0;

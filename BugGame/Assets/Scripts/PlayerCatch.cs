@@ -122,9 +122,9 @@ public class PlayerCatch : MonoBehaviour
         {
             GameDataStatic.butterfly++;
         }
-        else if (bug.name == "Psudoscorpian(Clone)")
+        else if (bug.name == "Pseudoscorpion(Clone)")
         {
-            GameDataStatic.scorpian++;
+            GameDataStatic.scorpion++;
         }
         else if (bug.name == "Snail(Clone)")
         {

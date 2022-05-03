@@ -18,10 +18,36 @@ public class JournalController : MonoBehaviour
     public GameObject forestTrigger;
     public GameObject caveTrigger;
 
+    [Header("BugIcons")]
+    public FlipSprite LadyBug;
+    public FlipSprite Moth;
+    public FlipSprite Jbeetle;
+    public FlipSprite Rhino;
+    public FlipSprite Dragonfly;
+    public FlipSprite Butterfly;
+    public FlipSprite Bee;
+    public FlipSprite Scorpian;
+    public FlipSprite Firefly;
+    public FlipSprite Spider;
+    public FlipSprite Snail;
 
-    void Start()
+
+
+    void Awake()
     {
         
+        for(int i = 0; i < 12; i++) // run for every bug in game to make sure UI is up to date
+        {
+            checkAlerts();
+        }
+
+        if(GameDataStatic.bugsCaught == 0)
+        {
+            resetIcons();
+        }
+
+
+
     }
 
     // Update is called once per frame
@@ -73,31 +99,107 @@ public class JournalController : MonoBehaviour
 
     public void checkAlerts() // check if any bugs have been caught for the first time.
     {
-       string alert = GameDataStatic.sendAlert();
+       (string, string) alert = GameDataStatic.sendAlert();
 
-        if(alert == "NONE") // if none then stop
+        // area alerts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        if(alert.Item1 == "NONE") // if none then stop
         {
             return;
         }
 
         joernalAlert = true;
 
-        if(alert == "FOREST")
+        if(alert.Item1 == "FOREST")
         {
             forestAlert = true;
         }
 
-        if (alert == "CAVE")
+        if (alert.Item1 == "CAVE")
         {
             caveAlert = true;
         }
+
+        // bug alerts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+        if (alert.Item2 == "ladybug")
+        {
+            LadyBug.SwapPic();
+        }
+
+        if (alert.Item2 == "moth")
+        {
+            Moth.SwapPic();
+        }
+
+        if (alert.Item2 == "jewel")
+        {
+            Jbeetle.SwapPic();
+        }
+
+        if (alert.Item2 == "rhino")
+        {
+            Rhino.SwapPic();
+        }
+
+        if (alert.Item2 == "dragon")
+        {
+            Dragonfly.SwapPic();
+        }
+
+        if (alert.Item2 == "butter")
+        {
+            Butterfly.SwapPic();
+        }
+
+        if (alert.Item2 == "bee")
+        {
+            Bee.SwapPic();
+        }
+
+        if (alert.Item2 == "scorp")
+        {
+            Scorpian.SwapPic();
+        }
+
+        if (alert.Item2 == "fire")
+        {
+            Firefly.SwapPic();
+        }
+
+        if (alert.Item2 == "spider")
+        {
+            Spider.SwapPic();
+        }
+
+        if (alert.Item2 == "snail")
+        {
+            Snail.SwapPic();
+        }
+
+
+
 
 
         return;
     }
     
 
-
+    void resetIcons()
+    {
+        LadyBug.resetImages();
+        Moth.resetImages();
+        Jbeetle.resetImages();
+        Rhino.resetImages();
+        Dragonfly.resetImages();
+        Butterfly.resetImages();
+        Bee.resetImages();
+        Scorpian.resetImages();
+        Firefly.resetImages();
+        Spider.resetImages();
+        Snail.resetImages();
+    }
 
 
 }
