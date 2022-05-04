@@ -302,8 +302,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12.53, y: 6.59, z: 11.91}
-  m_Center: {x: 0, y: 3, z: 0.7}
+  m_Size: {x: 6.88, y: 4.1, z: 8.96}
+  m_Center: {x: 0, y: 3, z: -0.1}
 --- !u!195 &7882148547716687266
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8738fea6d0ffaf459274829814e9db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStationary: 0
   canvasObject: {fileID: 8789869928611224937}
   skitterSound: {fileID: 4931237834702606935}
   lightSource: {fileID: 4198051462371303997}
