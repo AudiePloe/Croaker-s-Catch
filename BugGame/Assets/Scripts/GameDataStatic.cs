@@ -36,6 +36,17 @@ public static class GameDataStatic
     // Game data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     public static float gameVolume = 1;
 
+    public static bool CanWinGame()
+    {
+        if(mothAlert && jewelAlert && fireflyAlert && dragonflyAlert && ladybugAlert && rhinoAlert && snailAlert && scorpionAlert && spiderAlert && beeAlert && butterflyAlert)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+
 
     // journal system ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

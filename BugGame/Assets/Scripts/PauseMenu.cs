@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public bool showSurvey;
     public GameObject journalObjects;
 
+
+    bool playerWin = false;
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public UnityEvent OnPause;
@@ -31,10 +33,9 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
 
-     if(Input.GetKeyDown(KeyCode.Escape))
+     if(Input.GetKeyDown(KeyCode.Escape) && !playerWin)
         {
-            //Cursor.lockState = CursorLockMode.Confined;
-            //Cursor.visible = true;
+
             if (GameIsPaused)
             {
                 Resume();
@@ -62,7 +63,6 @@ public class PauseMenu : MonoBehaviour
     void Pause ()
     {
         playerCatch.canSwing = false;
-        //journalObjects.SetActive(true);
         playerFPS.canAim = false;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
@@ -70,6 +70,35 @@ public class PauseMenu : MonoBehaviour
         OnPause.Invoke();
         GameIsPaused = true;
     }
+
+    public void pauseToWin()
+    {
+        playerWin = true;
+        playerCatch.canSwing = false;
+        playerFPS.canAim = false;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        pauseMenuUI.SetActive(false);
+        OnPause.Invoke();
+        GameIsPaused = true;
+    }
+
+    public void resumeFromWin()
+    {
+        playerWin = false;
+
+        playerCatch.canSwing = true;
+        journalObjects.SetActive(false);
+        playerFPS.canAim = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        OnResume.Invoke();
+        GameIsPaused = false;
+
+    }
+
 
     public void LoadMenu()
     {
