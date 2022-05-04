@@ -89,7 +89,7 @@ public class BugSpawner2 : MonoBehaviour
     GameObject GetRareBug() // returns rare bug
     {
         // print("GotBug");
-        return rareBugList[Random.Range(0, bugList.Count)];
+        return rareBugList[Random.Range(0, rareBugList.Count)];
     }
 
 

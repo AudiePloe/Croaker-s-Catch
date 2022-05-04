@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class BugScript : MonoBehaviour
 {
+    public bool isStationary;
+
     public GameObject canvasObject;
 
     public AudioSource skitterSound;
@@ -55,47 +57,50 @@ public class BugScript : MonoBehaviour
     void Update()
     {
 
-        time += Time.deltaTime;
-
-        if (idle) // if allowed to idle
+        if (!isStationary)
         {
-            while (time >= idleTimer) // while the time is greater than their idle time
+
+            time += Time.deltaTime;
+
+            if (idle) // if allowed to idle
             {
-                nav.destination = IdleWalk(); // set destination of nav mesh agent to random position
+                while (time >= idleTimer) // while the time is greater than their idle time
+                {
+                    nav.destination = IdleWalk(); // set destination of nav mesh agent to random position
+                }
             }
+
+            //print(Vector3.Distance(player.position, transform.position));
+
+
+            if (playerController.isCrouched)
+            {
+                runProxy = runProximity / 2;
+            }
+            else
+                runProxy = runProximity;
+
+            if (Vector3.Distance(player.position, transform.position) <= runProxy && idle == true)
+            {
+                //print("AI Running");
+
+                canvasObject.SetActive(true);
+
+                skitterSound.Play();
+
+                idle = false;
+
+                nav.speed = runSpeed; // make the bug run from player
+                nav.destination = GetHidingSpot().position;
+            }
+
+
+            if (idle == false && transform.position.x == nav.destination.x && transform.position.z == nav.destination.z)
+            {
+                DestroyBug();
+            }
+
         }
-
-        //print(Vector3.Distance(player.position, transform.position));
-
-
-        if (playerController.isCrouched)
-        {
-            runProxy = runProximity / 2;
-        }
-        else
-            runProxy = runProximity;
-
-        if(Vector3.Distance(player.position, transform.position) <= runProxy && idle == true)
-        {
-            //print("AI Running");
-
-            canvasObject.SetActive(true);
-
-            skitterSound.Play();
-
-            idle = false;
-
-            nav.speed = runSpeed; // make the bug run from player
-            nav.destination = GetHidingSpot().position;
-        }
-
-
-        if(idle == false && transform.position.x == nav.destination.x && transform.position.z == nav.destination.z)
-        {
-            DestroyBug();
-        }
-
-
 
     }
 
