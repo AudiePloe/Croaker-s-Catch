@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 
+
+
+
 public class LevelChanger : MonoBehaviour
 {
     public string levelToChangeTo; // the scene you want to change to
@@ -13,13 +16,11 @@ public class LevelChanger : MonoBehaviour
     public Text progressText;
 
 
-    public string playerComeFrom;
-
-
+    
 
     void Start()
     {
-
+        //UpdatePlayerPos();
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class LevelChanger : MonoBehaviour
     {
         
     }
+
 
     IEnumerator LoadAsynch(string level) // loads level asynch so that loading screen can show progress
     {
@@ -53,9 +55,12 @@ public class LevelChanger : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+            if (SceneManager.GetActiveScene().name == "cave")
+                GameDataStatic.playerComeFromCave = true;
+            else
+                GameDataStatic.playerComeFromCave = false;
+
             StartCoroutine(LoadAsynch(levelToChangeTo));
         }
     }
-
-
 }

@@ -1,6 +1,4 @@
 using System.Collections;
-
-
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Security.Cryptography;
@@ -52,6 +50,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         speed = walkSpeed;
+
     }
 
 
@@ -210,4 +209,9 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
+
+
+
+
 }

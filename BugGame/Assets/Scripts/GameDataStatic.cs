@@ -7,7 +7,7 @@ public static class GameDataStatic
 
     // General Game Data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    public static string playerCameFrom { get; set; }
+    public static bool playerComeFromCave { get; set; }
 
 
 
