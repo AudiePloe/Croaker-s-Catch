@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2770416834629909737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2770416834629909736}
+  - component: {fileID: 2770416834629909739}
+  m_Layer: 0
+  m_Name: BugSpawner
+  m_TagString: BugSpawner
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2770416834629909736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770416834629909737}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 300, y: 20.24, z: 250}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2770416834629909739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770416834629909737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868f6ddc024fe7a4ca9afc269d0eb13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugList:
+  - {fileID: 7476586904485812909, guid: 55249fb63cdcc8b40814e899b9719564, type: 3}
+  - {fileID: 2901914338199529125, guid: 06197eb790b906146a51fd72decb450c, type: 3}
+  - {fileID: 4288283546201075684, guid: 1a6151fff9ab69a4e9ecbf907ac7748c, type: 3}
+  - {fileID: 1695524641956241184, guid: 350d3240c9941f64093a660eb2cc3b89, type: 3}
+  stationaryBugList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxStationaryBugs: 5
+  rareBugList:
+  - {fileID: 4288283546201075684, guid: c6fac3afd28107041ae8ded2fd4c7e8a, type: 3}
+  rareBugChance: 1
+  bugSpawns:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  maxBugsSpawned: 10
+  spawnRate: 0.5
+  bugsSpawned: 0
