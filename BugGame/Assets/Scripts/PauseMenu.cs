@@ -17,11 +17,13 @@ public class PauseMenu : MonoBehaviour
     public UnityEvent OnResume;
     FPSView playerFPS;
     PlayerCatch playerCatch;
+    PlayerController playerController;
 
      void Start()
     {
         playerFPS = GameObject.FindGameObjectWithTag("Player").GetComponent<FPSView>();
         playerCatch = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCatch>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -81,6 +83,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         OnPause.Invoke();
         GameIsPaused = true;
+        playerController.canMove = false;
     }
 
     public void resumeFromWin()
@@ -97,9 +100,15 @@ public class PauseMenu : MonoBehaviour
         OnResume.Invoke();
         GameIsPaused = false;
 
+        playerFPS.StopAiming();
+        playerController.canMove = true;
+
     }
 
-
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("CreditsMenu");
+    }
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");

@@ -107,4 +107,17 @@ public class FPSView : MonoBehaviour
 
         }
     }
+
+
+    public void StopAiming()
+    {
+        isAiming = false;
+        PC.canMove = true;
+        thirdPCamera.SetActive(true);
+        firstPCamera.SetActive(false);
+        crosshairs.SetActive(false);
+        playerModel.SetActive(true);
+    }
+
+
 }

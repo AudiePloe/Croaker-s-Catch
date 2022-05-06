@@ -41,7 +41,7 @@ public class JournalController : MonoBehaviour
     [Header("Misc")]
     public UnityEvent WinEvent;
     public UnityEvent ResumeEvent;
-
+    FPSView fps;
 
 
 
@@ -57,6 +57,8 @@ public class JournalController : MonoBehaviour
             resetIcons();
         }
 
+
+        fps = GameObject.Find("PlayerObject").GetComponent<FPSView>();
 
     }
 
@@ -201,6 +203,7 @@ public class JournalController : MonoBehaviour
         if(GameDataStatic.CanWinGame() || winRightNow)
         {
             WinEvent.Invoke();
+            winRightNow = false;
         }
 
 
@@ -290,7 +293,7 @@ public class JournalController : MonoBehaviour
 
     public void resumeGame()
     {
-        winRightNow = false;
+        ResumeEvent.Invoke();
     }
 
 

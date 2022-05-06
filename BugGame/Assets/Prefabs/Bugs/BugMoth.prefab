@@ -82,11 +82,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8738fea6d0ffaf459274829814e9db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStationary: 0
+  canvasObject: {fileID: 0}
+  skitterSound: {fileID: 0}
+  lightSource: {fileID: 0}
   bugName: 
   isRare: 0
   walkSpeed: 3
-  wonderDistance: 15
-  idleTimer: 5
+  wonderDistance: 20
+  idleTimer: 3
   runSpeed: 6
   runProximity: 10
   hidingSpots: []
