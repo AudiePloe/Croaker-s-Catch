@@ -15,12 +15,12 @@ public class LevelChanger : MonoBehaviour
     public Slider slider;
     public Text progressText;
 
-    PlayerPositionManager PPM;
+    //PlayerPositionManager PPM;
     
 
     void Start()
     {
-        PPM = GameObject.Find("GameManager").GetComponent<PlayerPositionManager>();
+        //PPM = GameObject.Find("GameManager").GetComponent<PlayerPositionManager>();
     }
 
     // Update is called once per frame
@@ -55,7 +55,7 @@ public class LevelChanger : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            PPM.SceneString = SceneManager.GetActiveScene().name;
+            //PPM.SceneString = SceneManager.GetActiveScene().name;
             StartCoroutine(LoadAsynch(levelToChangeTo));
         }
     }
