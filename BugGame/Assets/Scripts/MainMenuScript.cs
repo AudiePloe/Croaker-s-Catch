@@ -38,10 +38,10 @@ public class MainMenuScript : MonoBehaviour
     {
         
 
-        StartCoroutine(LoadAsynch("ForestLevel"));
+        StartCoroutine(LoadAsynch("CinemachineIntro"));//Changed ForestLevel to CinemachineIntro by Humberto
 
 
-        //SceneManager.LoadScene("ForestLevel");
+        //SceneManager.LoadScene("CinemachineIntro");//Changed ForestLevel to CinemachineIntro by Humberto
     }
 
     public void exitGame()
