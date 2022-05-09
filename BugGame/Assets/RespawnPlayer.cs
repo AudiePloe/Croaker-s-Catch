@@ -7,6 +7,8 @@ public class RespawnPlayer : MonoBehaviour
 
     Vector3 startPos;
 
+    public bool unStickPlayer = false;
+
 
 
     void Start()
@@ -18,9 +20,10 @@ public class RespawnPlayer : MonoBehaviour
     void Update()
     {
         
-        if(transform.localPosition.y <= -20f)
+        if(transform.localPosition.y <= -20f || unStickPlayer)
         {
             ResetPlayerPos();
+            unStickPlayer = false;
         }
 
     }
