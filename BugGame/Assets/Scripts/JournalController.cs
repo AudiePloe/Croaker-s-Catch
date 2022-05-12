@@ -1,3 +1,5 @@
+// Audie Ploe
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
@@ -12,16 +14,19 @@ public class JournalController : MonoBehaviour
     bool joernalAlert;
     bool forestAlert;
     bool caveAlert;
+    bool flowerAlert;
 
     [Header("Alert Icons")]
     public GameObject iconAlert;
     public GameObject joernalAlertIcon;
     public GameObject forestAlertIcon;
     public GameObject caveAlertIcon;
+    public GameObject flowerAlertIcon;
 
     [Header("Alert Triggers")]
     public GameObject forestTrigger;
     public GameObject caveTrigger;
+    public GameObject flowerTrigger;
     public GameObject journal;
 
     [Header("BugIcons")]
@@ -91,8 +96,13 @@ public class JournalController : MonoBehaviour
             caveAlertIcon.SetActive(true);
         }
 
+        if (flowerAlert) // if a bug belonging to the flower is cought
+        {
+            flowerAlertIcon.SetActive(true);
+        }
 
-        if(forestTrigger.activeInHierarchy) // when the player opens the page remove the alerts
+
+        if (forestTrigger.activeInHierarchy) // when the player opens the page remove the alerts
         {
             iconAlert.SetActive(false);
             joernalAlertIcon.SetActive(false);
@@ -112,6 +122,17 @@ public class JournalController : MonoBehaviour
 
             joernalAlert = false;
             caveAlert = false;
+
+        }
+
+        if (flowerTrigger.activeInHierarchy) // when the player opens the page remove the alerts
+        {
+            iconAlert.SetActive(false);
+            joernalAlertIcon.SetActive(false);
+            flowerAlertIcon.SetActive(false);
+
+            joernalAlert = false;
+            flowerAlert = false;
 
         }
 
@@ -140,6 +161,12 @@ public class JournalController : MonoBehaviour
         {
             caveAlert = true;
         }
+
+        if (alert.Item1 == "FLOWER")
+        {
+            flowerAlert = true;
+        }
+
 
         // bug alerts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

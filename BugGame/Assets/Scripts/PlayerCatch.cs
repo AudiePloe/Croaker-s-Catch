@@ -1,3 +1,5 @@
+// Audie Ploe
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -137,6 +139,10 @@ public class PlayerCatch : MonoBehaviour
         else if (bug.name == "Spider(Clone)")
         {
             GameDataStatic.spider++;
+        }
+        else if (bug.name == "Dragonfly(Clone)")
+        {
+            GameDataStatic.dragonfly++;
         }
 
         bug.GetComponent<BugScript>().DestroyBug();

@@ -5,7 +5,7 @@ using UnityEngine;
 public class RespawnPlayer : MonoBehaviour
 {
 
-    Vector3 startPos;
+    Vector3 startPos; // position player spawned into the scene at
 
     public bool unStickPlayer = false;
 
@@ -13,14 +13,14 @@ public class RespawnPlayer : MonoBehaviour
 
     void Start()
     {
-        startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z); // update position
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if(transform.localPosition.y <= -20f || unStickPlayer)
+        if(transform.localPosition.y <= -20f || unStickPlayer) // if player is out of bounds
         {
             ResetPlayerPos();
             unStickPlayer = false;
@@ -30,7 +30,7 @@ public class RespawnPlayer : MonoBehaviour
 
 
 
-    public void ResetPlayerPos()
+    public void ResetPlayerPos() 
     {
         transform.position = startPos;
     }

@@ -1,3 +1,5 @@
+// Audie Ploe
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +9,11 @@ public class BugScript : MonoBehaviour
 {
     public bool isStationary;
 
-    public GameObject canvasObject;
+    public GameObject canvasObject; // used for exlamation mark
 
     public AudioSource skitterSound;
 
-    public GameObject lightSource;
+    public GameObject lightSource; // used for showing player is in range
 
     public string bugName;
 
@@ -37,8 +39,8 @@ public class BugScript : MonoBehaviour
     Transform player;
     float runProxy;
 
-    BugSpawner2 bS2;
-    void Start()
+    public BugSpawner2 bS2;
+    void Awake()
     {
         nav = GetComponent<NavMeshAgent>();
         time = Random.Range(2f, 3.5f); // so that each bug is on their own idle times, otherwise they would all move at once.

@@ -1,3 +1,5 @@
+// Audie Ploe
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +10,6 @@ public static class GameDataStatic
     // General Game Data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     public static bool playerComeFromCave { get; set; }
-
-
-
 
 
 
@@ -108,17 +107,7 @@ public static class GameDataStatic
             return ("FOREST", "dragon");
         }
 
-        if (butterfly > 0 && butterflyAlert == false)
-        {
-            butterflyAlert = true;
-            return ("FOREST", "butter");
-        }
-
-        if (bee > 0 && beeAlert == false)
-        {
-            beeAlert = true;
-            return ("FOREST", "bee");
-        }
+        
 
 
 
@@ -151,7 +140,17 @@ public static class GameDataStatic
 
         //flower bugs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+        if (butterfly > 0 && butterflyAlert == false)
+        {
+            butterflyAlert = true;
+            return ("FLOWER", "butter");
+        }
 
+        if (bee > 0 && beeAlert == false)
+        {
+            beeAlert = true;
+            return ("FLOWER", "bee");
+        }
 
 
 

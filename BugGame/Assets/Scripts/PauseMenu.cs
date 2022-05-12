@@ -1,3 +1,5 @@
+// Audie Ploe
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,9 +14,13 @@ public class PauseMenu : MonoBehaviour
 
     bool playerWin = false;
     public static bool GameIsPaused = false;
+
+
     public GameObject pauseMenuUI;
     public UnityEvent OnPause;
     public UnityEvent OnResume;
+
+
     FPSView playerFPS;
     PlayerCatch playerCatch;
     PlayerController playerController;
