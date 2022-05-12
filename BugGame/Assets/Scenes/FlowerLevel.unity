@@ -1124,6 +1124,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1717590605}
+    - target: {fileID: 1269607864, guid: 623aaa0cc2008b44f894e5c74bc47155, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1717590606}
+    - target: {fileID: 1269607864, guid: 623aaa0cc2008b44f894e5c74bc47155, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
     - target: {fileID: 2286476175086489123, guid: 623aaa0cc2008b44f894e5c74bc47155, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1244,6 +1252,14 @@ PrefabInstance:
       propertyPath: WinEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1949445082}
+    - target: {fileID: 8654225982886127136, guid: 623aaa0cc2008b44f894e5c74bc47155, type: 3}
+      propertyPath: WinEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 1717590606}
+    - target: {fileID: 8654225982886127136, guid: 623aaa0cc2008b44f894e5c74bc47155, type: 3}
+      propertyPath: WinEvent.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 623aaa0cc2008b44f894e5c74bc47155, type: 3}
 --- !u!1001 &160382000
@@ -33980,6 +33996,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f0f3b7df4b21f439ed9fa9fa8b829e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1717590606 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6412548974619460774, guid: 255450b4cc3f8db40aedd5ed5b678a78, type: 3}
+  m_PrefabInstance: {fileID: 1717590604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1727834861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34859,11 +34880,8 @@ MonoBehaviour:
   - {fileID: 8819151505376410938, guid: 71703e5145d5e3247b551497075ce117, type: 3}
   - {fileID: 2110191910996678367, guid: a62414c196c660f49a692497237820fc, type: 3}
   - {fileID: 1635606579766739022, guid: c3bfe94a4a9f1f048b81eb75ef75ed81, type: 3}
-  stationaryBugList: []
-  maxStationaryBugs: 0
-  rareBugList:
-  - {fileID: 4288283546201075684, guid: c6fac3afd28107041ae8ded2fd4c7e8a, type: 3}
-  rareBugChance: 0
+  maxBugsSpawned: 50
+  spawnRate: 0.2
   bugSpawns:
   - {fileID: 339301172}
   - {fileID: 699301842}
@@ -34879,8 +34897,11 @@ MonoBehaviour:
   - {fileID: 512127698}
   - {fileID: 50968014}
   - {fileID: 1937466354}
-  maxBugsSpawned: 50
-  spawnRate: 0.2
+  stationaryBugList: []
+  maxStationaryBugs: 0
+  rareBugList:
+  - {fileID: 4288283546201075684, guid: c6fac3afd28107041ae8ded2fd4c7e8a, type: 3}
+  rareBugChance: 0
   bugsSpawned: 0
 --- !u!4 &1844296031
 Transform:
