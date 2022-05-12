@@ -138,6 +138,10 @@ public class PlayerCatch : MonoBehaviour
         {
             GameDataStatic.spider++;
         }
+        else if (bug.name == "Dragonfly(Clone)")
+        {
+            GameDataStatic.dragonfly++;
+        }
 
         bug.GetComponent<BugScript>().DestroyBug();
 
