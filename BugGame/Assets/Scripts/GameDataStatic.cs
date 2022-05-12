@@ -10,7 +10,7 @@ public static class GameDataStatic
     // General Game Data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     public static bool playerComeFromCave { get; set; }
-
+    public static bool firstTimeCatch = true;
 
 
 
@@ -189,6 +189,9 @@ public static class GameDataStatic
         bee = 0;
         butterfly = 0;
 
+
+
+        firstTimeCatch = true;
 
     }
 

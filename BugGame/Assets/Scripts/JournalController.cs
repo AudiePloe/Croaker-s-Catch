@@ -46,6 +46,7 @@ public class JournalController : MonoBehaviour
     [Header("Misc")]
     public UnityEvent WinEvent;
     public UnityEvent ResumeEvent;
+    public GameObject FirstTimeCatch;
     FPSView fps;
 
 
@@ -70,6 +71,15 @@ public class JournalController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(GameDataStatic.firstTimeCatch && GameDataStatic.bugsCaught > 0)
+        {
+            print("CaughtFirstBug");
+
+            FirstTimeCatch.SetActive(true);
+            GameDataStatic.firstTimeCatch = false;
+        }
+
 
 
         if (!journal.activeInHierarchy)
