@@ -108,17 +108,7 @@ public static class GameDataStatic
             return ("FOREST", "dragon");
         }
 
-        if (butterfly > 0 && butterflyAlert == false)
-        {
-            butterflyAlert = true;
-            return ("FOREST", "butter");
-        }
-
-        if (bee > 0 && beeAlert == false)
-        {
-            beeAlert = true;
-            return ("FOREST", "bee");
-        }
+        
 
 
 
@@ -151,7 +141,17 @@ public static class GameDataStatic
 
         //flower bugs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+        if (butterfly > 0 && butterflyAlert == false)
+        {
+            butterflyAlert = true;
+            return ("FLOWER", "butter");
+        }
 
+        if (bee > 0 && beeAlert == false)
+        {
+            beeAlert = true;
+            return ("FLOWER", "bee");
+        }
 
 
 
