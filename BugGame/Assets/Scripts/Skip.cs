@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Skip : MonoBehaviour
 {
+    public GameObject levelChanger;
+
+
     public void skip()
     {
-        SceneManager.LoadScene("ForestLevel");
+        //SceneManager.LoadScene("ForestLevel");
+
+        levelChanger.SetActive(true);
     }
 }
