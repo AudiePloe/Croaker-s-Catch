@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class PlayerPositionManager : MonoBehaviour
 {
+
+    // this script was scrapped due to issues of changing the transform of the player in the scene
+
+
+
+
+
+
+
     [Header("Cave")]
     public Vector3 cavePos;
     public Quaternion caveRoatation;

@@ -1,26 +1,36 @@
+// Audie Ploe
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BugSpawner2 : MonoBehaviour
 {
+    [Header("Spawnable Bugs")]
 
     public List<GameObject> bugList; // list of normal bugs to spawn
+    public int maxBugsSpawned; // number of moving bugs spawned
+    public float spawnRate; // rate at which they spawn
+    public List<Transform> bugSpawns; // list of all spawnpoints in map
+
+
+
+    [Header("Stationary bugs")]
 
     public List<GameObject> stationaryBugList; // list of bugs that dont move
-
     public int maxStationaryBugs; // max stationary bugs
     int stationaryBugsSpawned; // number of stationary bugs spawned
 
-    public List<GameObject> rareBugList; // list of rate bugs
 
+
+    [Header("Rare Bug")]
+
+    public List<GameObject> rareBugList; // list of rate bugs
     public float rareBugChance; // chance that rare bug will spawn (out of 100)
 
-    public List<Transform> bugSpawns; // list of all spawnpoints in map
 
-    public int maxBugsSpawned; // number of moving bugs spawned
 
-    public float spawnRate; // rate at which they spawn
+    
 
     float time = 0;
     public int bugsSpawned; // number of bugs spawned

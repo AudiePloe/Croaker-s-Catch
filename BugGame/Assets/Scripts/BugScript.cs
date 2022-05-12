@@ -1,3 +1,5 @@
+// Audie Ploe
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,11 +9,11 @@ public class BugScript : MonoBehaviour
 {
     public bool isStationary;
 
-    public GameObject canvasObject;
+    public GameObject canvasObject; // used for exlamation mark
 
     public AudioSource skitterSound;
 
-    public GameObject lightSource;
+    public GameObject lightSource; // used for showing player is in range
 
     public string bugName;
 

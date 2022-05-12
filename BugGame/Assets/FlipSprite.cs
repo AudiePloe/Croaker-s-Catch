@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlipSprite : MonoBehaviour
+public class FlipSprite : MonoBehaviour // used for changing the image and info of the bugs when caught
 {
 
     public GameObject BlackPic;
@@ -12,7 +12,7 @@ public class FlipSprite : MonoBehaviour
     public GameObject FilledInfo;
 
 
-    public void SwapPic()
+    public void SwapPic() // swaps the blacked out images for the filled in ones.
     {
         BlackPic.SetActive(false);
         ColorPic.SetActive(true);
