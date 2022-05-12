@@ -59,6 +59,14 @@ public class BugScript : MonoBehaviour
     void Update()
     {
 
+
+        if(bS2 == null)
+        {
+            bS2 = GameObject.FindGameObjectWithTag("BugSpawner").GetComponent<BugSpawner2>();
+        }
+
+
+
         if (!isStationary)
         {
 
