@@ -14,7 +14,7 @@ public class LevelChanger : MonoBehaviour
     public string levelToChangeTo; // the scene you want to change to
     public GameObject loadingScreen;
 
-    public Slider slider;
+    public Image slider;
     public Text progressText;
 
     //PlayerPositionManager PPM;
@@ -41,7 +41,7 @@ public class LevelChanger : MonoBehaviour
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
-            slider.value = progress;
+            slider.fillAmount = progress;
             progressText.text = progress * 100f + "%";
 
             yield return null;
