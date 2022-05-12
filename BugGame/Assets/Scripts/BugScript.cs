@@ -37,8 +37,8 @@ public class BugScript : MonoBehaviour
     Transform player;
     float runProxy;
 
-    BugSpawner2 bS2;
-    void Start()
+    public BugSpawner2 bS2;
+    void Awake()
     {
         nav = GetComponent<NavMeshAgent>();
         time = Random.Range(2f, 3.5f); // so that each bug is on their own idle times, otherwise they would all move at once.
