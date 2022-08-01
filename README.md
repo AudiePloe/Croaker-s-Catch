@@ -1,10 +1,10 @@
 # GameSim-Spring-2022
 
 ## Game Name
-### (Working on it)
+### Croakers Catch
 
 ## Game Mechanics
-* Catch Bugs
+* Catch Bugs and have fun.
 
 ## Art Style
 * Cartoon
